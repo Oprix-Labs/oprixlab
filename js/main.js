@@ -41,4 +41,33 @@ document.addEventListener('DOMContentLoaded', () => {
             header.style.boxShadow = 'var(--shadow-sm)';
         }
     });
+
+    const cards = document.querySelectorAll('.count');
+
+  cards.forEach(card => {
+    const counter = card.querySelector('.counter');
+    let hasAnimated = false;
+
+    card.addEventListener('mouseenter', () => {
+      if (hasAnimated) return;
+
+      const target = +counter.getAttribute('data-target');
+      let count = 0;
+      const increment = target / 100;
+
+      const updateCount = () => {
+        count += increment;
+
+        if (count < target) {
+          counter.innerText = Math.ceil(count);
+          requestAnimationFrame(updateCount);
+        } else {
+          counter.innerText = target;
+        }
+      };
+
+      updateCount();
+      hasAnimated = true; // prevents repeating every hover
+    });
+  });
 });
