@@ -1,4 +1,6 @@
-/* 
+@import "tailwindcss";
+
+/*
 ==============================================
    Oprix Labs - Global Styles
 ============================================== 
@@ -243,14 +245,14 @@ content: "";
     inset: 0;
     background: 
     linear-gradient(rgba(47, 47, 47, 0.6), rgba(0,0,0,0.6)),
-    url("/images/web.png") center/cover no-repeat;
+    url("../images/web.png") center/cover no-repeat;
 
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
     z-index: 0;
 }
 .backs:hover::before{
-    opacity: 5;
+    opacity: 1;
 }
 
 .info{
@@ -266,14 +268,14 @@ content: "";
     inset: 0;
     background: 
     linear-gradient(rgba(47, 47, 47, 0.6), rgba(0,0,0,0.6)),
-    url("/images/mobile.png") center/cover no-repeat;
+    url("../images/mobile.png") center/cover no-repeat;
 
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
     z-index: 0;
 }
 .mobile:hover::before{
-    opacity: 5;
+    opacity: 1;
 }
 
 
@@ -283,14 +285,14 @@ content: "";
     inset: 0;
     background: 
     linear-gradient(rgba(47, 47, 47, 0.6), rgba(0,0,0,0.6)),
-    url("/images/cloud.png") center/cover no-repeat;
+    url("../images/cloud1.png") center/cover no-repeat;
 
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
     z-index: 0;
 }
 .cloud:hover::before{
-    opacity: 5;
+    opacity: 1;
 }
 .infos{
     
