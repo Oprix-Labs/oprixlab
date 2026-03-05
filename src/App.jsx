@@ -7,10 +7,12 @@ import Portfolio from './pages/Portfolio'
 import Contact from './pages/Contact'
 import Process from './pages/Process'
 import Blog from './pages/Blog'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

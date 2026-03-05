@@ -1,11 +1,20 @@
 import { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+
+const links = [
+  { to: '/', label: 'Home' },
+  { to: '/about', label: 'About' },
+  { to: '/services', label: 'Services' },
+  { to: '/process', label: 'Process' },
+  { to: '/portfolio', label: 'Portfolio' },
+  { to: '/blog', label: 'Blog' },
+];
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const headerRef = useRef(null);
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const toggleMenu = () => setIsMenuOpen((o) => !o);
   const closeMenu = () => setIsMenuOpen(false);
 
   // shadow when scrolling
@@ -19,78 +28,75 @@ export default function Header() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  // prevent body scroll when mobile overlay is open
+  useEffect(() => {
+    document.body.style.overflow = isMenuOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMenuOpen]);
+
+  const linkClass = ({ isActive }) =>
+    `text-sm font-medium no-underline transition-colors duration-200 ${
+      isActive ? 'text-[#64ffda]' : 'text-[#ccd6f6] hover:text-[#64ffda]'
+    }`;
+
   return (
     <header
       ref={headerRef}
-      className="fixed top-0 w-full z-50 bg-[rgba(10,25,47,0.95)] backdrop-blur-[10px] shadow-sm py-4 transition-all duration-300"
+      className="fixed top-0 w-full z-50 bg-[rgba(10,25,47,0.97)] backdrop-blur-lg border-b border-[#223344] transition-all duration-300"
     >
-      <div className="max-w-[1200px] mx-auto px-8 flex justify-between items-center">
-        <Link
+      <div className="flex items-center justify-between h-16 w-full pl-4 pr-0">
+        <NavLink
           to="/"
-          className="text-2xl font-bold text-[#64ffda] tracking-wider no-underline"
+          className="text-2xl font-bold text-[#64ffda] tracking-wider py-3 pr-8"
         >
           OPRIX LAB
-        </Link>
+        </NavLink>
         <button
-          className="md:hidden text-[#64ffda] text-2xl cursor-pointer bg-transparent border-none"
+          className="lg:hidden text-[#64ffda] text-2xl p-2"
           aria-label="Toggle navigation"
+          aria-expanded={isMenuOpen}
           onClick={toggleMenu}
         >
-          ☰
+          {isMenuOpen ? '✕' : '☰'}
         </button>
-        <nav
-          className={`${isMenuOpen ? 'flex flex-col space-y-4 absolute top-full left-0 w-full bg-[rgba(10,25,47,0.95)] p-4' : 'hidden'} md:flex md:flex-row md:space-y-0 md:gap-8`}
-        >
-          <Link
-            to="/"
-            onClick={closeMenu}
-            className="text-[#ccd6f6] text-sm font-medium no-underline hover:text-[#64ffda] transition-colors duration-200"
-          >
-            Home
-          </Link>
-          <Link
-            to="/about"
-            onClick={closeMenu}
-            className="text-[#ccd6f6] text-sm font-medium no-underline hover:text-[#64ffda] transition-colors duration-200"
-          >
-            About
-          </Link>
-          <Link
-            to="/services"
-            onClick={closeMenu}
-            className="text-[#ccd6f6] text-sm font-medium no-underline hover:text-[#64ffda] transition-colors duration-200"
-          >
-            Services
-          </Link>
-          <Link
-            to="/process"
-            onClick={closeMenu}
-            className="text-[#ccd6f6] text-sm font-medium no-underline hover:text-[#64ffda] transition-colors duration-200"
-          >
-            Process
-          </Link>
-          <Link
-            to="/portfolio"
-            onClick={closeMenu}
-            className="text-[#ccd6f6] text-sm font-medium no-underline hover:text-[#64ffda] transition-colors duration-200"
-          >
-            Portfolio
-          </Link>
-          <Link
-            to="/blog"
-            onClick={closeMenu}
-            className="text-[#ccd6f6] text-sm font-medium no-underline hover:text-[#64ffda] transition-colors duration-200"
-          >
-            Blog
-          </Link>
-          <Link
+        <nav className="hidden lg:flex items-center space-x-6">
+          {links.map(({ to, label }) => (
+            <NavLink key={to} to={to} className={linkClass} onClick={closeMenu}>
+              {label}
+            </NavLink>
+          ))}
+          <NavLink
             to="/contact"
+            className="text-[#64ffda] inline-block px-6  border-2 border-[#64ffda] font-semibold rounded hover:bg-[rgba(100,255,218,0.1)] transition-all duration-300"
             onClick={closeMenu}
-            className="text-[#64ffda] inline-block px-6 py-3 border-2 border-[#64ffda] font-semibold rounded no-underline cursor-pointer hover:bg-[rgba(100,255,218,0.1)] hover:-translate-y-1 transition-all duration-300"
           >
             Contact
-          </Link>
+          </NavLink>
         </nav>
+      </div>
+
+      {/* mobile menu dropdown */}
+      <div
+        className={`lg:hidden overflow-hidden bg-[rgba(10,25,47,0.98)] transition-[max-height] duration-300 ${
+          isMenuOpen ? 'max-h-[450px]' : 'max-h-0'
+        }`}
+      >
+        <div className="flex flex-col items-center space-y-6 py-6 w-full text-center">
+          {links.map(({ to, label }) => (
+            <NavLink key={to} to={to} className={linkClass} onClick={closeMenu}>
+              {label}
+            </NavLink>
+          ))}
+          <NavLink
+            to="/contact"
+            className="text-[#64ffda] inline-block px-6 py-2 border-2 border-[#64ffda] font-semibold rounded hover:bg-[rgba(100,255,218,0.1)] transition-all duration-300"
+            onClick={closeMenu}
+          >
+            Contact
+          </NavLink>
+        </div>
       </div>
     </header>
   );

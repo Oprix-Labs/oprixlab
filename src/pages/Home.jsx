@@ -48,7 +48,7 @@ function ServiceCard({ icon, alt, title, description, target = 120 }) {
 
   return (
     <div
-      className="card group relative overflow-hidden bg-[#112240] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer"
+      className="card group relative overflow-hidden bg-[#112240] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] hover:scale-[1.02] transition-all duration-300 cursor-pointer"
       onMouseEnter={handleMouseEnter}
     >
       <div className="card-icon flex w-[100px] mb-0">
@@ -77,13 +77,13 @@ export default function Home() {
       <Header />
       <main className="bg-[#020c1b] text-[#8892b0] font-['Inter',system-ui,-apple-system,sans-serif] antialiased leading-relaxed">
         {/* Hero Section */}
-        <section className="min-h-screen flex items-center pt-20 bg-[#020c1b]">
+        <section className="min-h-screen flex items-center pt-20 bg-gradient-to-b from-[#020c1b] to-[#011027]">
           <div className="max-w-[1200px] mx-auto px-8">
             <div className="max-w-[800px]">
               <span className="block text-[#64ffda] font-['Fira Code',monospace] mb-4 text-base">
                 Hi, we are Oprix Lab.
               </span>
-              <h1 className="text-[4rem] font-bold leading-tight text-[#ccd6f6] mb-2">
+              <h1 className="text-[4rem] font-bold leading-tight text-[#ccd6f6] mb-4">
                 We build digital products.
               </h1>
               <h2 className="text-[3rem] font-bold leading-tight text-[#8892b0] mb-8">
@@ -105,9 +105,9 @@ export default function Home() {
         </section>
 
         {/* What We Do Section */}
-        <section id="services" className="py-16 bg-[#020c1b]">
+        <section id="services" className="py-16 bg-[#011027]">
           <div className="max-w-[1200px] mx-auto px-8">
-            <h2 className="text-[2.5rem] font-bold leading-tight text-[#ccd6f6] mb-8">
+            <h2 className="text-[2.5rem] font-bold leading-tight text-[#ccd6f6] mb-12">
               What We Do
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8">
