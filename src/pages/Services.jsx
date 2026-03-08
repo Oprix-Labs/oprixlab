@@ -11,53 +11,70 @@ export default function Services() {
         <section className="py-16 bg-[#020c1b] pt-[120px] pb-10">
           <div className="max-w-[1200px] mx-auto px-8 text-center">
             <h1 className="text-[3rem] font-bold leading-tight text-[#ccd6f6] mb-4">
-              Our Capabilities
+              Our Services
             </h1>
             <p className="text-xl leading-relaxed max-w-[600px] mx-auto text-[#8892b0]">
-              End-to-end software engineering services tailored to your business
-              needs.
+              A full spectrum of digital and technical solutions delivered by curated professionals.
             </p>
           </div>
         </section>
 
-        {/* Service 1 */}
+        {/* Service 1 — Web Solutions */}
+        <section className="py-16 bg-[#020c1b]">
+          <div className="max-w-[1200px] mx-auto px-8">
+            <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8">
+              <div>
+                <div className="text-5xl mb-4">🌐</div>
+                <h2 className="text-[2.5rem] font-bold leading-tight text-[#ccd6f6] mb-4">
+                  Web Solutions
+                </h2>
+              </div>
+              <div>
+                <p className="text-[#8892b0] mb-4 leading-relaxed">
+                  From simple landing pages to full business websites, we design and build modern,
+                  responsive web presences tailored to your goals. We also handle ongoing
+                  maintenance and optimization.
+                </p>
+                <h3 className="text-xl mb-4 text-[#ccd6f6]">What's Included:</h3>
+                <ul className="list-disc ml-6 mb-6 text-[#8892b0]">
+                  <li>Website design &amp; development (static &amp; CMS)</li>
+                  <li>Website redesign &amp; maintenance</li>
+                  <li>Website security &amp; performance optimization</li>
+                  <li>Hosting &amp; domain management</li>
+                  <li>Basic SEO setup</li>
+                  <li>Contact forms &amp; email integration</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <hr className="border-0 border-t border-[#112240] max-w-[1200px] mx-auto" />
+
+        {/* Service 2 — Web Applications */}
         <section className="py-16 bg-[#020c1b]">
           <div className="max-w-[1200px] mx-auto px-8">
             <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8">
               <div>
                 <div className="text-5xl mb-4">💻</div>
                 <h2 className="text-[2.5rem] font-bold leading-tight text-[#ccd6f6] mb-4">
-                  Web Development
+                  Web Applications
                 </h2>
               </div>
               <div>
                 <p className="text-[#8892b0] mb-4 leading-relaxed">
-                  We build modern, responsive, and accessible websites and web
-                  applications. From simple landing pages to complex SaaS platforms,
-                  we ensure your web presence is fast, secure, and SEO-friendly.
+                  Interactive, functional web apps built to solve real operational problems — from
+                  booking systems and portals to dashboards and data collection tools.
                 </p>
-                <h3 className="text-xl mb-4 text-[#ccd6f6]">Key Features:</h3>
+                <h3 className="text-xl mb-4 text-[#ccd6f6]">What's Included:</h3>
                 <ul className="list-disc ml-6 mb-6 text-[#8892b0]">
-                  <li>Single Page Applications (SPA)</li>
-                  <li>Progressive Web Apps (PWA)</li>
-                  <li>E-commerce Solutions</li>
-                  <li>Content Management Systems (CMS)</li>
+                  <li>Simple web applications</li>
+                  <li>Booking &amp; reservation systems</li>
+                  <li>Login / authentication systems</li>
+                  <li>Dashboards &amp; inventory systems</li>
+                  <li>School / organization portals</li>
+                  <li>Form-based systems &amp; data collection tools</li>
                 </ul>
-                <h3 className="text-xl mb-4 text-[#ccd6f6]">Tech Stack:</h3>
-                <div className="flex gap-4 flex-wrap">
-                  <span className="bg-[#112240] text-[#e6f1ff] px-4 py-2 text-sm rounded">
-                    React
-                  </span>
-                  <span className="bg-[#112240] text-[#e6f1ff] px-4 py-2 text-sm rounded">
-                    Next.js
-                  </span>
-                  <span className="bg-[#112240] text-[#e6f1ff] px-4 py-2 text-sm rounded">
-                    TypeScript
-                  </span>
-                  <span className="bg-[#112240] text-[#e6f1ff] px-4 py-2 text-sm rounded">
-                    HTML/CSS
-                  </span>
-                </div>
               </div>
             </div>
           </div>
@@ -65,41 +82,29 @@ export default function Services() {
 
         <hr className="border-0 border-t border-[#112240] max-w-[1200px] mx-auto" />
 
-        {/* Service 2 */}
+        {/* Service 3 — Mobile Applications */}
         <section className="py-16 bg-[#020c1b]">
           <div className="max-w-[1200px] mx-auto px-8">
             <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8">
               <div>
                 <div className="text-5xl mb-4">📱</div>
                 <h2 className="text-[2.5rem] font-bold leading-tight text-[#ccd6f6] mb-4">
-                  Mobile Development
+                  Mobile Applications
                 </h2>
               </div>
               <div>
                 <p className="text-[#8892b0] mb-4 leading-relaxed">
-                  Reach your customers wherever they are with intuitive mobile
-                  applications. We specialize in cross-platform development to
-                  maximize your reach while maintaining a native look and feel.
+                  Mobile apps built for practical use — informational apps, event or directory apps,
+                  and lightweight internal tools, deployed cross-platform on Android and iOS.
                 </p>
-                <h3 className="text-xl mb-4 text-[#ccd6f6]">Key Features:</h3>
+                <h3 className="text-xl mb-4 text-[#ccd6f6]">What's Included:</h3>
                 <ul className="list-disc ml-6 mb-6 text-[#8892b0]">
-                  <li>iOS and Android Support</li>
-                  <li>Offline Functionality</li>
-                  <li>Push Notifications</li>
-                  <li>App Store Deployment</li>
+                  <li>Simple informational apps</li>
+                  <li>Event &amp; directory apps</li>
+                  <li>Internal-use mobile tools</li>
+                  <li>Cross-platform setup (Android / iOS)</li>
+                  <li>App maintenance &amp; updates</li>
                 </ul>
-                <h3 className="text-xl mb-4 text-[#ccd6f6]">Tech Stack:</h3>
-                <div className="flex gap-4 flex-wrap">
-                  <span className="bg-[#112240] text-[#e6f1ff] px-4 py-2 text-sm rounded">
-                    React Native
-                  </span>
-                  <span className="bg-[#112240] text-[#e6f1ff] px-4 py-2 text-sm rounded">
-                    Flutter
-                  </span>
-                  <span className="bg-[#112240] text-[#e6f1ff] px-4 py-2 text-sm rounded">
-                    Expo
-                  </span>
-                </div>
               </div>
             </div>
           </div>
@@ -107,41 +112,175 @@ export default function Services() {
 
         <hr className="border-0 border-t border-[#112240] max-w-[1200px] mx-auto" />
 
-        {/* Service 3 */}
+        {/* Service 4 — IT Support & Technical Services */}
+        <section className="py-16 bg-[#020c1b]">
+          <div className="max-w-[1200px] mx-auto px-8">
+            <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8">
+              <div>
+                <div className="text-5xl mb-4">🛠️</div>
+                <h2 className="text-[2.5rem] font-bold leading-tight text-[#ccd6f6] mb-4">
+                  IT Support &amp; Technical Services
+                </h2>
+              </div>
+              <div>
+                <p className="text-[#8892b0] mb-4 leading-relaxed">
+                  Hands-on technical support for individuals and businesses — from software setup
+                  and troubleshooting to network configuration and data protection.
+                </p>
+                <h3 className="text-xl mb-4 text-[#ccd6f6]">What's Included:</h3>
+                <ul className="list-disc ml-6 mb-6 text-[#8892b0]">
+                  <li>Software installation &amp; OS troubleshooting</li>
+                  <li>Virus &amp; malware removal</li>
+                  <li>System performance optimization</li>
+                  <li>Data backup &amp; recovery</li>
+                  <li>Peripheral setup &amp; configuration</li>
+                  <li>Network / Wi-Fi setup &amp; internet troubleshooting</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <hr className="border-0 border-t border-[#112240] max-w-[1200px] mx-auto" />
+
+        {/* Service 5 — Infrastructure & Online Setup */}
         <section className="py-16 bg-[#020c1b]">
           <div className="max-w-[1200px] mx-auto px-8">
             <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8">
               <div>
                 <div className="text-5xl mb-4">☁️</div>
                 <h2 className="text-[2.5rem] font-bold leading-tight text-[#ccd6f6] mb-4">
-                  Cloud & DevOps
+                  Infrastructure &amp; Online Setup
                 </h2>
               </div>
               <div>
                 <p className="text-[#8892b0] mb-4 leading-relaxed">
-                  Build a solid foundation for your applications with our cloud
-                  infrastructure services. We ensure your systems are scalable,
-                  secure, and cost-effective.
+                  Get your business properly set up online — from professional email and cloud
+                  storage to website deployment and basic security configurations.
                 </p>
-                <h3 className="text-xl mb-4 text-[#ccd6f6]">Key Features:</h3>
+                <h3 className="text-xl mb-4 text-[#ccd6f6]">What's Included:</h3>
                 <ul className="list-disc ml-6 mb-6 text-[#8892b0]">
-                  <li>Serverless Architecture</li>
-                  <li>CI/CD Pipelines</li>
-                  <li>Database Management</li>
-                  <li>Security Audits</li>
+                  <li>Business email &amp; Google Workspace setup</li>
+                  <li>Cloud storage &amp; user permissions</li>
+                  <li>Website / app deployment</li>
+                  <li>Backup systems &amp; basic security configuration</li>
                 </ul>
-                <h3 className="text-xl mb-4 text-[#ccd6f6]">Tech Stack:</h3>
-                <div className="flex gap-4 flex-wrap">
-                  <span className="bg-[#112240] text-[#e6f1ff] px-4 py-2 text-sm rounded">
-                    AWS
-                  </span>
-                  <span className="bg-[#112240] text-[#e6f1ff] px-4 py-2 text-sm rounded">
-                    Docker
-                  </span>
-                  <span className="bg-[#112240] text-[#e6f1ff] px-4 py-2 text-sm rounded">
-                    GitHub Actions
-                  </span>
-                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <hr className="border-0 border-t border-[#112240] max-w-[1200px] mx-auto" />
+
+        {/* Service 6 — Digital Systems & Automation */}
+        <section className="py-16 bg-[#020c1b]">
+          <div className="max-w-[1200px] mx-auto px-8">
+            <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8">
+              <div>
+                <div className="text-5xl mb-4">⚙️</div>
+                <h2 className="text-[2.5rem] font-bold leading-tight text-[#ccd6f6] mb-4">
+                  Digital Systems &amp; Automation
+                </h2>
+              </div>
+              <div>
+                <p className="text-[#8892b0] mb-4 leading-relaxed">
+                  Streamline your workflows with smart digital tools — automated forms, spreadsheet
+                  systems, dashboards, and lightweight internal platforms.
+                </p>
+                <h3 className="text-xl mb-4 text-[#ccd6f6]">What's Included:</h3>
+                <ul className="list-disc ml-6 mb-6 text-[#8892b0]">
+                  <li>Online forms &amp; data collection</li>
+                  <li>Workflow &amp; spreadsheet automation</li>
+                  <li>Dashboard reporting</li>
+                  <li>Simple internal digital tools</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <hr className="border-0 border-t border-[#112240] max-w-[1200px] mx-auto" />
+
+        {/* Service 7 — Training & Workshops */}
+        <section className="py-16 bg-[#020c1b]">
+          <div className="max-w-[1200px] mx-auto px-8">
+            <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8">
+              <div>
+                <div className="text-5xl mb-4">🎓</div>
+                <h2 className="text-[2.5rem] font-bold leading-tight text-[#ccd6f6] mb-4">
+                  Training &amp; Workshops
+                </h2>
+              </div>
+              <div>
+                <p className="text-[#8892b0] mb-4 leading-relaxed">
+                  Practical, tailored digital and technical training sessions for schools, churches,
+                  businesses, and individuals looking to build their digital literacy.
+                </p>
+                <h3 className="text-xl mb-4 text-[#ccd6f6]">What's Included:</h3>
+                <ul className="list-disc ml-6 mb-6 text-[#8892b0]">
+                  <li>Website &amp; digital tool usage training</li>
+                  <li>Coding workshops (HTML, CSS, JavaScript)</li>
+                  <li>IT literacy sessions</li>
+                  <li>Tailored workshops for schools, churches, and businesses</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <hr className="border-0 border-t border-[#112240] max-w-[1200px] mx-auto" />
+
+        {/* Service 8 — Digital & E-Services */}
+        <section className="py-16 bg-[#020c1b]">
+          <div className="max-w-[1200px] mx-auto px-8">
+            <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8">
+              <div>
+                <div className="text-5xl mb-4">🪪</div>
+                <h2 className="text-[2.5rem] font-bold leading-tight text-[#ccd6f6] mb-4">
+                  Digital &amp; E-Services
+                </h2>
+              </div>
+              <div>
+                <p className="text-[#8892b0] mb-4 leading-relaxed">
+                  We help individuals navigate and complete essential government and institutional
+                  online processes — from academic result checks to business and ID registrations.
+                </p>
+                <h3 className="text-xl mb-4 text-[#ccd6f6]">What's Included:</h3>
+                <ul className="list-disc ml-6 mb-6 text-[#8892b0]">
+                  <li>Academic result checking (BECE / WASSCE)</li>
+                  <li>School &amp; university application assistance</li>
+                  <li>Passport, Ghana Card, NHIS registration</li>
+                  <li>Business &amp; TIN registration</li>
+                  <li>Online payments &amp; subscriptions</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <hr className="border-0 border-t border-[#112240] max-w-[1200px] mx-auto" />
+
+        {/* Service 9 — Digital Access & Support Services */}
+        <section className="py-16 bg-[#020c1b]">
+          <div className="max-w-[1200px] mx-auto px-8">
+            <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8">
+              <div>
+                <div className="text-5xl mb-4">🖨️</div>
+                <h2 className="text-[2.5rem] font-bold leading-tight text-[#ccd6f6] mb-4">
+                  Digital Access &amp; Support Services
+                </h2>
+              </div>
+              <div>
+                <p className="text-[#8892b0] mb-4 leading-relaxed">
+                  Practical day-to-day digital support for those who need help navigating online
+                  platforms, managing documents, and completing digital tasks.
+                </p>
+                <h3 className="text-xl mb-4 text-[#ccd6f6]">What's Included:</h3>
+                <ul className="list-disc ml-6 mb-6 text-[#8892b0]">
+                  <li>Online service assistance &amp; navigation</li>
+                  <li>Document uploading &amp; status tracking</li>
+                  <li>Printing &amp; digital document delivery</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -151,16 +290,16 @@ export default function Services() {
         <section className="py-16 text-center bg-[#112240]">
           <div className="max-w-[1200px] mx-auto px-8">
             <h2 className="text-[2.5rem] font-bold leading-tight text-[#ccd6f6] mb-4">
-              Need a custom solution?
+              Explore how we can support your project
             </h2>
             <p className="text-[#8892b0] mb-8 leading-relaxed">
-              We love solving unique challenges. Let's discuss your specific needs.
+              Not sure which service fits your need? Reach out and we'll point you in the right direction.
             </p>
             <Link
               to="/contact"
               className="inline-block px-6 py-3 border-2 border-[#64ffda] text-[#64ffda] font-semibold rounded no-underline cursor-pointer hover:bg-[rgba(100,255,218,0.1)] hover:-translate-y-1 transition-all duration-300"
             >
-              Start a Conversation
+              Contact Us
             </Link>
           </div>
         </section>

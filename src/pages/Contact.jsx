@@ -6,7 +6,7 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    company: '',
+    subject: '',
     service: '',
     message: '',
   });
@@ -50,7 +50,7 @@ export default function Contact() {
       setFormData({
         name: '',
         email: '',
-        company: '',
+        subject: '',
         service: '',
         message: '',
       });
@@ -68,7 +68,7 @@ export default function Contact() {
         <section className="py-16 bg-[#020c1b] pt-[120px] pb-10">
           <div className="max-w-[1200px] mx-auto px-8 text-center">
             <h1 className="text-[3rem] font-bold leading-tight text-[#ccd6f6] mb-4">
-              Let's Build Together
+              Start Your Project with Oprix Lab
             </h1>
             <p className="text-xl leading-relaxed max-w-[600px] mx-auto text-[#8892b0]">
               Have a project in mind? We'd love to hear about it.
@@ -121,14 +121,14 @@ export default function Contact() {
                   </div>
 
                   <div className="mb-6">
-                    <label htmlFor="company" className="block mb-2 text-[#ccd6f6] font-medium">
-                      Company / Organization
+                    <label htmlFor="subject" className="block mb-2 text-[#ccd6f6] font-medium">
+                      Subject
                     </label>
                     <input
                       type="text"
-                      id="company"
-                      name="company"
-                      value={formData.company}
+                      id="subject"
+                      name="subject"
+                      value={formData.subject}
                       onChange={handleChange}
                       className="w-full px-3 py-3 bg-[#112240] border border-transparent rounded text-[#e6f1ff] font-['Inter',system-ui,-apple-system,sans-serif] text-base transition-all duration-200 focus:outline-none focus:border-[#64ffda]"
                     />
@@ -146,10 +146,15 @@ export default function Contact() {
                       className="w-full px-3 py-3 bg-[#112240] border border-transparent rounded text-[#e6f1ff] font-['Inter',system-ui,-apple-system,sans-serif] text-base transition-all duration-200 focus:outline-none focus:border-[#64ffda]"
                     >
                       <option value="">Select a service</option>
-                      <option value="web">Web Development</option>
-                      <option value="mobile">Mobile App Development</option>
-                      <option value="cloud">Cloud Solutions</option>
-                      <option value="consulting">Technical Consulting</option>
+                      <option value="web-solutions">Web Solutions</option>
+                      <option value="web-applications">Web Applications</option>
+                      <option value="mobile-apps">Mobile Applications</option>
+                      <option value="it-support">IT Support & Technical Services</option>
+                      <option value="infrastructure">Infrastructure & Online Setup</option>
+                      <option value="digital-systems">Digital Systems & Automation</option>
+                      <option value="training">Training & Workshops</option>
+                      <option value="e-services">Digital & E-Services</option>
+                      <option value="digital-access">Digital Access & Support Services</option>
                       <option value="other">Other</option>
                     </select>
                   </div>
@@ -189,27 +194,24 @@ export default function Contact() {
                 <div className="bg-[#112240] p-8 rounded">
                   <div className="mb-8">
                     <h3 className="text-xl mb-2 text-[#64ffda]">Email</h3>
-                    <p className="text-[#8892b0]">hello@oprixlabs.com</p>
+                    <p className="text-[#8892b0]">info@oprixlab.com</p>
                   </div>
 
                   <div className="mb-8">
-                    <h3 className="text-xl mb-2 text-[#64ffda]">Business Hours</h3>
+                    <h3 className="text-xl mb-2 text-[#64ffda]">Phone</h3>
+                    <p className="text-[#8892b0]">+233 XXX XXX XXX</p>
+                  </div>
+
+                  <div className="mb-8">
+                    <h3 className="text-xl mb-2 text-[#64ffda]">Response Time</h3>
                     <p className="text-[#8892b0]">
-                      Monday - Friday: 9:00 AM - 6:00 PM EST
-                      <br />
-                      Saturday - Sunday: Closed
+                      We typically respond within 24 hours during business days.
                     </p>
                   </div>
 
-                  <div className="mb-8">
+                  <div>
                     <h3 className="text-xl mb-2 text-[#64ffda]">Follow Us</h3>
                     <div className="flex gap-4 mt-4">
-                      <a
-                        href="#"
-                        className="text-[#8892b0] text-2xl no-underline hover:text-[#64ffda] hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
-                      >
-                        GitHub
-                      </a>
                       <a
                         href="#"
                         className="text-[#8892b0] text-2xl no-underline hover:text-[#64ffda] hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
@@ -222,14 +224,13 @@ export default function Contact() {
                       >
                         Twitter
                       </a>
+                      <a
+                        href="#"
+                        className="text-[#8892b0] text-2xl no-underline hover:text-[#64ffda] hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
+                      >
+                        Instagram
+                      </a>
                     </div>
-                  </div>
-
-                  <div>
-                    <h3 className="text-xl mb-2 text-[#64ffda]">Response Time</h3>
-                    <p className="text-[#8892b0]">
-                      We typically respond within 24 hours during business days.
-                    </p>
                   </div>
                 </div>
               </div>
