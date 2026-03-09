@@ -6,45 +6,66 @@ export default function Process() {
   const steps = [
     {
       number: '01',
-      title: 'Discovery & Requirements',
+      title: 'Client Inquiry Received',
       description:
-        'We start by listening. We deep dive into your business goals, target audience, and technical requirements to understand exactly what needs to be built.',
-      deliverables: 'Project Brief, Requirement Specifications',
+        'A prospective client reaches out via our contact form, direct message, or referral. We acknowledge the inquiry promptly and gather initial details about the project.',
+      deliverables: 'Inquiry acknowledgment',
     },
     {
       number: '02',
-      title: 'Planning & Strategy',
+      title: 'Scope Definition & Project Pricing',
       description:
-        'We outline the technical architecture, choose the right technology stack, and create a roadmap. This ensures we build a scalable solution from day one.',
-      deliverables: 'Technical Architecture Doc, Project Roadmap',
+        'We work with the client to clearly define the project scope, deliverables, timeline, and budget. A formal quote or proposal is prepared and agreed upon.',
+      deliverables: 'Project scope document, pricing quote',
     },
     {
       number: '03',
-      title: 'Design & Prototyping',
+      title: 'Payment Secured',
       description:
-        'Our designers create high-fidelity mockups and interactive prototypes, giving you a clear visual of the final product before we write a single line of code.',
-      deliverables: 'UI/UX Designs, Interactive Prototypes',
+        'Payment is collected in full or as a confirmed deposit before work begins. This ensures commitment from both parties and protects all involved.',
+      deliverables: 'Payment confirmation',
     },
     {
       number: '04',
-      title: 'Development',
+      title: 'Member Recommendation',
       description:
-        'This is where the magic happens. We code your solution using best practices, ensuring clean, maintainable, and efficient code.',
-      deliverables: 'Alpha/Beta Builds, Source Code',
+        'The Operations Manager reviews the project requirements and recommends the most suitable member from our technical pool based on skills, availability, and past performance.',
+      deliverables: 'Member recommendation',
     },
     {
       number: '05',
-      title: 'Testing & QA',
+      title: 'Founder Approval',
       description:
-        'We rigorously test the application across different devices, browsers, and scenarios to catch bugs and maximize performance.',
-      deliverables: 'Test Reports, Bug Fixes',
+        'The Founder reviews the recommended assignment and grants final approval. This ensures every project is assigned with strategic oversight and quality assurance in mind.',
+      deliverables: 'Assignment approval',
     },
     {
       number: '06',
-      title: 'Launch & Support',
+      title: 'Member Executes Project',
       description:
-        'We deploy your application to production and monitor it closely. Our relationship doesn\'t end at launch; we offer ongoing support and maintenance.',
-      deliverables: 'Live Product, Documentation, Support Plan',
+        'The assigned member begins work on the project under the Oprix Lab brand. Regular updates are provided to keep the client informed of progress.',
+      deliverables: 'Work-in-progress updates',
+    },
+    {
+      number: '07',
+      title: 'Quality Review & Final Adjustments',
+      description:
+        'Before delivery, the project is reviewed internally for quality, completeness, and alignment with the agreed scope. Any necessary adjustments are made.',
+      deliverables: 'Quality-reviewed deliverable',
+    },
+    {
+      number: '08',
+      title: 'Delivery to Client',
+      description:
+        'The completed project is delivered to the client. Final walkthrough, documentation, or handover instructions are provided as needed.',
+      deliverables: 'Final delivery, handover documentation',
+    },
+    {
+      number: '09',
+      title: 'Member Payout & Commission Allocation',
+      description:
+        'Upon successful delivery, the assigned member receives their agreed payout. Oprix Lab retains its commission per the internal compensation structure.',
+      deliverables: 'Member payout, commission record',
     },
   ];
 
@@ -59,8 +80,7 @@ export default function Process() {
               How We Work
             </h1>
             <p className="text-xl leading-relaxed max-w-[600px] mx-auto text-[#8892b0]">
-              A proven methodology designed to deliver transparency, quality, and
-              results.
+              A transparent, structured project flow from inquiry to delivery — with accountability at every step.
             </p>
           </div>
         </section>
@@ -93,20 +113,53 @@ export default function Process() {
           </div>
         </section>
 
+        {/* Member Visibility Policy */}
+        <section className="py-16 bg-[#112240]">
+          <div className="max-w-[1200px] mx-auto px-8">
+            <h2 className="text-[2.5rem] font-bold leading-tight text-[#ccd6f6] mb-6">
+              Member Visibility Policy
+            </h2>
+            <p className="text-[#8892b0] leading-relaxed max-w-[700px]">
+              Oprix Lab maintains public profiles for all active members, including their role, core
+              skills, and portfolio samples. This policy promotes accountability, builds client trust,
+              and ensures transparency across our curated network.
+            </p>
+          </div>
+        </section>
+
+        {/* Ethical & Service Limitations */}
+        <section className="py-16 bg-[#020c1b]">
+          <div className="max-w-[1200px] mx-auto px-8">
+            <h2 className="text-[2.5rem] font-bold leading-tight text-[#ccd6f6] mb-6">
+              Ethical &amp; Service Limitations
+            </h2>
+            <p className="text-[#8892b0] mb-6 leading-relaxed max-w-[700px]">
+              Oprix Lab is committed to lawful, ethical service delivery. The following activities
+              are strictly prohibited under our operational guidelines:
+            </p>
+            <ul className="list-disc ml-6 text-[#8892b0] space-y-2 max-w-[700px]">
+              <li>No illegal or fraudulent services of any kind</li>
+              <li>No data misuse, unauthorized access, or privacy violations</li>
+              <li>No impersonation of individuals, institutions, or organizations</li>
+              <li>All services must remain lawful under applicable regulations</li>
+            </ul>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="py-16 text-center bg-[#112240]">
           <div className="max-w-[1200px] mx-auto px-8">
             <h2 className="text-[2.5rem] font-bold leading-tight text-[#ccd6f6] mb-4">
-              Ready to start?
+              Ready to start your project?
             </h2>
             <p className="text-[#8892b0] mb-8 leading-relaxed">
-              Let's turn your vision into a reality.
+              Send us an inquiry and we'll walk you through the process from day one.
             </p>
             <Link
               to="/contact"
               className="inline-block px-6 py-3 border-2 border-[#64ffda] text-[#64ffda] font-semibold rounded no-underline cursor-pointer hover:bg-[rgba(100,255,218,0.1)] hover:-translate-y-1 transition-all duration-300"
             >
-              Start Project
+              Start a Project
             </Link>
           </div>
         </section>

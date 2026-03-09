@@ -11,36 +11,37 @@ export default function About() {
         <section className="py-16 bg-[#020c1b] pt-[120px] pb-10">
           <div className="max-w-[1200px] mx-auto px-8 text-center">
             <h1 className="text-[3rem] font-bold leading-tight text-[#ccd6f6] mb-4">
-              About Oprix Labs
+              About Oprix Lab
             </h1>
             <p className="text-xl leading-relaxed max-w-[600px] mx-auto text-[#8892b0]">
-              Building the future of technology, one line of code at a time.
+              A curated collective building real-world results through skilled professionals.
             </p>
           </div>
         </section>
 
-        {/* Mission & Vision */}
+        {/* Who We Are */}
         <section className="py-16 bg-[#020c1b]">
           <div className="max-w-[1200px] mx-auto px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                 <h2 className="text-[2.5rem] font-bold leading-tight text-[#ccd6f6] mb-4">
-                  Our Mission
+                  Who We Are
                 </h2>
                 <p className="text-[#8892b0] leading-relaxed">
-                  To empower businesses with transformative digital solutions that
-                  drive growth, efficiency, and innovation. We believe in technology
-                  that serves people, not the other way around.
+                  Oprix Lab is a private tech collective. We curate skilled professionals to
+                  deliver multi-service digital solutions — spanning web development, mobile apps,
+                  IT support, digital systems, and online facilitation.
                 </p>
               </div>
               <div>
                 <h2 className="text-[2.5rem] font-bold leading-tight text-[#ccd6f6] mb-4">
-                  Our Vision
+                  Our Mission
                 </h2>
                 <p className="text-[#8892b0] leading-relaxed">
-                  To be the global standard for engineering excellence, creating
-                  software that defines the next generation of the web and mobile
-                  experiences.
+                  Delivering reliable, accessible, and trustworthy digital and technical solutions
+                  through a curated network of skilled professionals. We aim to build reputation,
+                  deliver real projects, and develop operational experience before formal company
+                  registration.
                 </p>
               </div>
             </div>
@@ -54,83 +55,129 @@ export default function About() {
               Our Core Values
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8">
-              <div className="bg-[#112240] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer">
+              <div className="bg-[#0d1f3c] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer">
                 <h3 className="text-[1.75rem] font-bold leading-tight text-[#ccd6f6] mb-4">
-                  Innovation First
+                  Trust
                 </h3>
                 <p className="text-[#8892b0] leading-relaxed">
-                  We constantly push boundaries and explore new technologies to
-                  deliver the best solutions.
+                  Our single most important value. Every client interaction, member assignment, and
+                  project delivery is guided by accountability and transparency.
                 </p>
               </div>
-              <div className="bg-[#112240] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer">
+              <div className="bg-[#0d1f3c] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer">
                 <h3 className="text-[1.75rem] font-bold leading-tight text-[#ccd6f6] mb-4">
-                  Integrity
+                  Accountability
                 </h3>
                 <p className="text-[#8892b0] leading-relaxed">
-                  We believe in transparent communication and honest partnerships
-                  with our clients.
+                  Every member operates under the Oprix Lab brand with clear responsibilities. We
+                  take ownership of our commitments from inquiry to delivery.
                 </p>
               </div>
-              <div className="bg-[#112240] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer">
+              <div className="bg-[#0d1f3c] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer">
                 <h3 className="text-[1.75rem] font-bold leading-tight text-[#ccd6f6] mb-4">
-                  Quality Over Quantity
+                  Competence
                 </h3>
                 <p className="text-[#8892b0] leading-relaxed">
-                  We prioritize writing clean, maintainable, and efficient code over
-                  rushing features.
+                  We curate only skilled, capable professionals. Technical quality is non-negotiable
+                  — we only accept members who can reliably deliver results.
                 </p>
               </div>
-              <div className="bg-[#112240] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer">
+              <div className="bg-[#0d1f3c] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer">
                 <h3 className="text-[1.75rem] font-bold leading-tight text-[#ccd6f6] mb-4">
-                  User-Centric Design
+                  Professionalism
                 </h3>
                 <p className="text-[#8892b0] leading-relaxed">
-                  Every decision we make starts with the end-user in mind to ensure
-                  intuitive experiences.
+                  We operate with structure, process documentation, and consistent standards — even
+                  as an unregistered collective. Professional conduct is expected at every level.
                 </p>
               </div>
-              <div className="bg-[#112240] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer">
+              <div className="bg-[#0d1f3c] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer">
                 <h3 className="text-[1.75rem] font-bold leading-tight text-[#ccd6f6] mb-4">
-                  Collaboration
+                  Accessibility
                 </h3>
                 <p className="text-[#8892b0] leading-relaxed">
-                  Great software is built by great teams. We foster a culture of
-                  shared knowledge and support.
+                  We make reliable digital solutions accessible to individuals, small businesses,
+                  churches, schools, and organizations at every level.
                 </p>
               </div>
-              <div className="bg-[#112240] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer">
+              <div className="bg-[#0d1f3c] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer">
                 <h3 className="text-[1.75rem] font-bold leading-tight text-[#ccd6f6] mb-4">
-                  Continuous Learning
+                  Structured Growth
                 </h3>
                 <p className="text-[#8892b0] leading-relaxed">
-                  The tech landscape changes fast. We stay ahead of the curve
-                  through constant education.
+                  We don't rush. The trial-phase strategy ensures sustainable growth — building
+                  systems and reputation before scaling and formal registration.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Our Story */}
+        {/* Our Story / Trial Phase Strategy */}
         <section className="py-16 bg-[#020c1b]">
           <div className="max-w-[1200px] mx-auto px-8">
             <h2 className="text-[2.5rem] font-bold leading-tight text-[#ccd6f6] mb-8">
               Our Story
             </h2>
             <div className="max-w-[800px]">
-              <p className="text-[#8892b0] mb-4 leading-relaxed">
-                Founded in 2024, Oprix Labs began as a collective of passionate
-                engineers and designers tired of the status quo in software
-                development. We saw too many projects fail due to poor
-                communication, legacy thinking, and bloated processes.
+              <p className="text-[#8892b0] mb-6 leading-relaxed">
+                Oprix Lab was founded as a structured experiment during university — a deliberate plan to build a trustworthy digital brand before formal registration. Rather
+                than waiting for the "perfect" moment, we chose to act: build systems, deliver real
+                projects, and earn a reputation the right way.
               </p>
-              <p className="text-[#8892b0] leading-relaxed">
-                We set out to build a firm that combines the agility of a startup
-                with the engineering rigor of an enterprise. Today, we work with
-                clients ranging from ambitious startups to established enterprises,
-                helping them navigate the digital landscape with confidence.
-              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                <div className="bg-[#112240] rounded-[15px] p-6 border-l-4 border-[#64ffda]">
+                  <h3 className="text-xl font-bold text-[#64ffda] mb-3">Year 1 — Build</h3>
+                  <p className="text-[#8892b0] leading-relaxed">
+                    Establish internal systems, onboard skilled members, deliver real client
+                    projects, and collect testimonials. Focus on execution and learning.
+                  </p>
+                </div>
+                <div className="bg-[#112240] rounded-[15px] p-6 border-l-4 border-[#64ffda]">
+                  <h3 className="text-xl font-bold text-[#64ffda] mb-3">Year 2 — Refine</h3>
+                  <p className="text-[#8892b0] leading-relaxed">
+                    Improve structure, increase pricing, standardize documentation, and prepare for
+                    formal company registration. Scale sustainably with proven operational excellence.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Organizational Structure */}
+        <section className="py-16 bg-[#112240]">
+          <div className="max-w-[1200px] mx-auto px-8">
+            <h2 className="text-[2.5rem] font-bold leading-tight text-[#ccd6f6] mb-8 text-center">
+              Organizational Structure
+            </h2>
+            <div className="max-w-[800px] mx-auto">
+              <div className="flex flex-col gap-4">
+                <div className="bg-[#64ffda] text-[#020c1b] rounded-[15px] p-6 text-center shadow-lg">
+                  <h3 className="text-xl font-bold mb-1">Founder</h3>
+                  <p className="text-sm">Strategic head &amp; brand custodian — final approvals, client communication, quality control</p>
+                </div>
+                <div className="flex justify-center">
+                  <div className="w-0.5 h-8 bg-[#64ffda]"></div>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="bg-[#0d1f3c] rounded-[15px] p-6 text-center border border-[#64ffda]/30">
+                    <h3 className="text-lg font-bold text-[#ccd6f6] mb-1">Operations Manager</h3>
+                    <p className="text-sm text-[#8892b0]">Internal coordination, member verification, deadline monitoring, talent management</p>
+                  </div>
+                  <div className="bg-[#0d1f3c] rounded-[15px] p-6 text-center border border-[#64ffda]/30">
+                    <h3 className="text-lg font-bold text-[#ccd6f6] mb-1">Client Acquisition Team</h3>
+                    <p className="text-sm text-[#8892b0]">Lead generation, proposal preparation, marketing coordination</p>
+                  </div>
+                </div>
+                <div className="flex justify-center">
+                  <div className="w-0.5 h-8 bg-[#64ffda]"></div>
+                </div>
+                <div className="bg-[#0d1f3c] rounded-[15px] p-6 text-center border border-[#64ffda]/30">
+                  <h3 className="text-lg font-bold text-[#ccd6f6] mb-1">Members — Technical Pool</h3>
+                  <p className="text-sm text-[#8892b0]">Curated skilled professionals across web, mobile, IT, digital systems, and facilitation services</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -139,10 +186,10 @@ export default function About() {
         <section className="py-16 text-center bg-[#020c1b]">
           <div className="max-w-[1200px] mx-auto px-8">
             <h2 className="text-[2.5rem] font-bold leading-tight text-[#ccd6f6] mb-4">
-              Join our journey
+              Be part of the journey
             </h2>
             <p className="text-[#8892b0] mb-8 leading-relaxed">
-              Interested in working with us or joining our team?
+              Interested in working with us or joining our curated network of professionals?
             </p>
             <Link
               to="/contact"

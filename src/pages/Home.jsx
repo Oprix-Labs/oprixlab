@@ -84,28 +84,48 @@ export default function Home() {
                 Hi, we are Oprix Lab.
               </span>
               <h1 className="text-[4rem] font-bold leading-tight text-[#ccd6f6] mb-4">
-                We build digital products.
+                Collective Brilliance,
               </h1>
               <h2 className="text-[3rem] font-bold leading-tight text-[#8892b0] mb-8">
-                Transforming ideas into reality.
+                Real World Results.
               </h2>
               <p className="text-xl leading-relaxed max-w-[600px] mb-10 text-[#8892b0]">
-                We are a software development firm specializing in building
-                exceptional digital experiences. From robust web applications to
-                scalable backend systems, we engineer the future of tech.
+                Oprix Lab is a curated network of skilled technical professionals delivering
+                trusted digital solutions under one brand.
               </p>
-              <Link
-                to="/portfolio"
-                className="inline-block px-6 py-3 border-2 border-[#64ffda] text-[#64ffda] font-semibold rounded no-underline cursor-pointer hover:bg-[rgba(100,255,218,0.1)] hover:-translate-y-1 transition-all duration-300"
-              >
-                Check out our work
-              </Link>
+              <div className="flex gap-4 flex-wrap">
+                <Link
+                  to="/contact"
+                  className="inline-block px-6 py-3 bg-[#64ffda] text-[#020c1b] font-semibold rounded no-underline cursor-pointer hover:bg-[rgba(100,255,218,0.85)] hover:-translate-y-1 transition-all duration-300"
+                >
+                  Get Started
+                </Link>
+                <Link
+                  to="/services"
+                  className="inline-block px-6 py-3 border-2 border-[#64ffda] text-[#64ffda] font-semibold rounded no-underline cursor-pointer hover:bg-[rgba(100,255,218,0.1)] hover:-translate-y-1 transition-all duration-300"
+                >
+                  Explore Services
+                </Link>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* What We Do Section */}
-        <section id="services" className="py-16 bg-[#011027]">
+        {/* Our Mission */}
+        <section className="py-16 bg-[#011027]">
+          <div className="max-w-[1200px] mx-auto px-8 text-center">
+            <h2 className="text-[2.5rem] font-bold leading-tight text-[#ccd6f6] mb-6">
+              Our Mission
+            </h2>
+            <p className="text-xl leading-relaxed max-w-[700px] mx-auto text-[#8892b0]">
+              Delivering reliable, accessible, and trustworthy digital and technical solutions
+              through a curated network of skilled professionals.
+            </p>
+          </div>
+        </section>
+
+        {/* Core Services Snapshot */}
+        <section id="services" className="py-16 bg-[#020c1b]">
           <div className="max-w-[1200px] mx-auto px-8">
             <h2 className="text-[2.5rem] font-bold leading-tight text-[#ccd6f6] mb-12">
               What We Do
@@ -113,22 +133,42 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8">
               <ServiceCard
                 icon={webIcon}
-                title="Web Development"
-                description="Custom, responsive websites and web applications built with modern frameworks and best practices for speed and scalability."
+                title="Web Solutions"
+                description="Website design, development, maintenance, security, and performance optimization for businesses and individuals."
                 target={120}
               />
               <ServiceCard
                 icon={mobileIcon}
-                title="Mobile Apps"
-                description="Native and cross-platform mobile applications that provide seamless user experiences on iOS and Android devices."
+                title="Mobile Applications"
+                description="Simple to functional cross-platform mobile apps for Android and iOS, including internal tools and event apps."
                 target={120}
               />
               <ServiceCard
                 icon={cloudIcon}
-                title="Cloud Solutions"
-                description="Scalable cloud infrastructure design and implementation using AWS, Azure, or Google Cloud to ensure your apps are always online."
+                title="IT Support & Infrastructure"
+                description="Software setup, troubleshooting, network configuration, cloud storage, and online system deployment."
                 target={120}
               />
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 max-w-[800px]">
+              <div className="bg-[#112240] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer">
+                <div className="text-4xl mb-4">⚙️</div>
+                <h3 className="text-[1.75rem] font-bold leading-tight text-[#ccd6f6] mb-4">
+                  Digital Systems & Automation
+                </h3>
+                <p className="text-[#8892b0]">
+                  Online forms, workflow automation, dashboards, and simple internal digital tools tailored to your operations.
+                </p>
+              </div>
+              <div className="bg-[#112240] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer">
+                <div className="text-4xl mb-4">🌐</div>
+                <h3 className="text-[1.75rem] font-bold leading-tight text-[#ccd6f6] mb-4">
+                  Online Facilitation
+                </h3>
+                <p className="text-[#8892b0]">
+                  Digital access support, e-services assistance, document handling, and online service navigation for individuals and organizations.
+                </p>
+              </div>
             </div>
             <div className="text-center mt-12">
               <Link
@@ -141,123 +181,55 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Featured Work Section */}
-        <section id="work" className="py-16 bg-[#112240]">
+        {/* Why Choose Oprix Lab */}
+        <section className="py-16 bg-[#112240]">
           <div className="max-w-[1200px] mx-auto px-8">
             <h2 className="text-[2.5rem] font-bold leading-tight text-[#ccd6f6] mb-8">
-              Featured Projects
+              Why Choose Oprix Lab?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8">
-              {/* Project 1 */}
-              <div className="bg-[#112240] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer">
+              <div className="bg-[#0d1f3c] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer">
                 <h3 className="text-[1.75rem] font-bold leading-tight text-[#ccd6f6] mb-4">
-                  FinTech Dashboard
-                </h3>
-                <p className="text-[#8892b0] mb-4 leading-relaxed">
-                  A real-time analytics dashboard for a financial services firm,
-                  processing millions of transactions daily.
-                </p>
-                <ul className="font-['Fira Code',monospace] text-xs text-[#8892b0] flex gap-4 list-none">
-                  <li>React</li>
-                  <li>Node.js</li>
-                  <li>D3.js</li>
-                </ul>
-              </div>
-              {/* Project 2 */}
-              <div className="bg-[#112240] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer">
-                <h3 className="text-[1.75rem] font-bold leading-tight text-[#ccd6f6] mb-4">
-                  E-Commerce Platform
-                </h3>
-                <p className="text-[#8892b0] mb-4 leading-relaxed">
-                  A fully custom e-commerce solution with integrated payments,
-                  inventory management, and customer CRM.
-                </p>
-                <ul className="font-['Fira Code',monospace] text-xs text-[#8892b0] flex gap-4 list-none">
-                  <li>Next.js</li>
-                  <li>Stripe</li>
-                  <li>PostgreSQL</li>
-                </ul>
-              </div>
-              {/* Project 3 */}
-              <div className="bg-[#112240] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer">
-                <h3 className="text-[1.75rem] font-bold leading-tight text-[#ccd6f6] mb-4">
-                  AI Content Generator
-                </h3>
-                <p className="text-[#8892b0] mb-4 leading-relaxed">
-                  An AI-powered tool that helps marketers generate blog posts and
-                  social media content in seconds.
-                </p>
-                <ul className="font-['Fira Code',monospace] text-xs text-[#8892b0] flex gap-4 list-none">
-                  <li>Python</li>
-                  <li>OpenAI API</li>
-                  <li>Vue.js</li>
-                </ul>
-              </div>
-            </div>
-            <div className="text-center mt-12">
-              <Link
-                to="/portfolio"
-                className="inline-block px-6 py-3 border-2 border-[#64ffda] text-[#64ffda] font-semibold rounded no-underline cursor-pointer hover:bg-[rgba(100,255,218,0.1)] hover:-translate-y-1 transition-all duration-300"
-              >
-                View Full Portfolio
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Why Choose Us */}
-        <section className="py-16 bg-[#020c1b]">
-          <div className="max-w-[1200px] mx-auto px-8">
-            <h2 className="text-[2.5rem] font-bold leading-tight text-[#ccd6f6] mb-8">
-              Why Oprix Labs?
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8">
-              <div className="bg-[#112240] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer">
-                <h3 className="text-[1.75rem] font-bold leading-tight text-[#ccd6f6] mb-4">
-                  Technical Excellence
+                  Trust & Accountability
                 </h3>
                 <p className="text-[#8892b0] leading-relaxed">
-                  We don't just write code; we engineer solutions that are robust,
-                  maintainable, and scalable.
+                  Every member is curated and accountable under the Oprix Lab brand. Clients deal with a single trusted point of contact.
                 </p>
               </div>
-              <div className="bg-[#112240] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer">
+              <div className="bg-[#0d1f3c] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer">
                 <h3 className="text-[1.75rem] font-bold leading-tight text-[#ccd6f6] mb-4">
-                  Client-Centric
+                  Competence
                 </h3>
                 <p className="text-[#8892b0] leading-relaxed">
-                  Your business goals are our priority. We work as an extension of
-                  your team.
+                  Our curated network brings verified technical skill to every project, ensuring quality outcomes across all service areas.
                 </p>
               </div>
-              <div className="bg-[#112240] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer">
+              <div className="bg-[#0d1f3c] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer">
                 <h3 className="text-[1.75rem] font-bold leading-tight text-[#ccd6f6] mb-4">
-                  Future-Proof
+                  Professionalism
                 </h3>
                 <p className="text-[#8892b0] leading-relaxed">
-                  We use modern technologies and patterns to ensure your software
-                  stands the test of time.
+                  We operate with clear processes, structured delivery, and a commitment to real-world results for universities, businesses, and individuals.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* CTA Footer */}
         <section className="py-16 text-center bg-[#020c1b]">
           <div className="max-w-[1200px] mx-auto px-8">
             <h2 className="text-[2.5rem] font-bold leading-tight text-[#ccd6f6] mb-4">
-              Ready to build something amazing?
+              Ready to start your project?
             </h2>
             <p className="text-[#8892b0] mb-8 max-w-[600px] mx-auto leading-relaxed">
-              Whether you have a clear vision or just an idea, we can help you bring
-              it to life.
+              Whether you need a website, mobile app, IT support, or digital assistance — we have the right professional for your needs.
             </p>
             <Link
               to="/contact"
               className="inline-block px-6 py-3 border-2 border-[#64ffda] text-[#64ffda] font-semibold rounded no-underline cursor-pointer hover:bg-[rgba(100,255,218,0.1)] hover:-translate-y-1 transition-all duration-300"
             >
-              Get In Touch
+              Contact Us Today
             </Link>
           </div>
         </section>
