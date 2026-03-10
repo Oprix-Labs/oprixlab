@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+﻿import { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 
 const links = [
@@ -52,7 +52,7 @@ export default function Header() {
           to="/"
           className="text-2xl font-bold text-[#22d3ee] tracking-wider py-3 pr-8"
         >
-          OPRIX LAB
+          Oprix Labs
         </NavLink>
         <button
           className="lg:hidden text-[#22d3ee] text-2xl p-2"

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+﻿import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -43,7 +43,7 @@ export default function Process() {
       number: '06',
       title: 'Member Executes Project',
       description:
-        'The assigned member begins work on the project under the Oprix Lab brand. Regular updates are provided to keep the client informed of progress.',
+        'The assigned member begins work on the project under the Oprix Labs brand. Regular updates are provided to keep the client informed of progress.',
       deliverables: 'Work-in-progress updates',
     },
     {
@@ -113,7 +113,7 @@ export default function Process() {
               Member Visibility Policy
             </h2>
             <p className="text-[#8892b0] leading-relaxed max-w-[700px]">
-              Oprix Lab maintains public profiles for all active members, including their role, core
+              Oprix Labs maintains public profiles for all active members, including their role, core
               skills, and portfolio samples. This policy promotes accountability, builds client trust,
               and ensures transparency across our curated network.
             </p>
@@ -127,7 +127,7 @@ export default function Process() {
               Ethical &amp; Service Limitations
             </h2>
             <p className="text-[#8892b0] mb-6 leading-relaxed max-w-[700px]">
-              Oprix Lab is committed to lawful, ethical service delivery. The following activities
+              Oprix Labs is committed to lawful, ethical service delivery. The following activities
               are strictly prohibited under our operational guidelines:
             </p>
             <ul className="list-disc ml-6 text-[#8892b0] space-y-2 max-w-[700px]">

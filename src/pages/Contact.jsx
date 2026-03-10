@@ -1,4 +1,4 @@
-import Header from '../components/Header';
+﻿import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ContactForm from '../components/ContactForm';
 import GetInTouchCard from '../components/GetInTouchCard';
@@ -60,7 +60,7 @@ export default function ContactPage() {
               Contact
             </p>
             <h1 className="mt-3 text-4xl font-bold text-slate-900 dark:text-slate-100 sm:text-5xl">
-              Start Your Project with Oprix Lab
+              Start Your Project with Oprix Labs
             </h1>
             <p className="mt-4 text-base text-slate-600 dark:text-slate-300 sm:text-lg">
               Share your idea, timeline, and goals. Our team will help you shape the right solution.

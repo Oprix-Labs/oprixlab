@@ -1,4 +1,4 @@
-import { createElement } from 'react';
+﻿import { createElement } from 'react';
 import { Github, Linkedin, Mail, MapPin, Phone, Twitter, Clock } from 'lucide-react';
 import { motion as Motion, useReducedMotion } from 'framer-motion';
 
@@ -7,8 +7,8 @@ const CONTACT_DETAILS = [
     id: 'email',
     icon: Mail,
     label: 'Email',
-    value: 'hello@oprixlab.com',
-    href: 'mailto:hello@oprixlab.com',
+    value: 'hello@oprixlabs.com',
+    href: 'mailto:hello@oprixlabs.com',
   },
   {
     id: 'phone',

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+﻿import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -9,7 +9,7 @@ export default function Team() {
       <div className="min-h-screen bg-gradient-to-br from-[#0f0f1e] to-[#1a1a2e] flex flex-col items-center justify-center px-5 py-[120px]">
         <div className="text-center max-w-2xl mx-auto">
           <p className="text-[#22d3ee] text-sm font-semibold uppercase tracking-[0.3em] mb-6">
-            Oprix Lab
+            Oprix Labs
           </p>
           <h1 className="text-7xl sm:text-8xl font-black text-white mb-6 tracking-tight leading-none">
             Coming<br />Soon
@@ -53,7 +53,7 @@ export default function Team() {
         'Overall quality control & brand standards',
         'Strategic direction and growth planning',
       ],
-      bio: 'The strategic head of Oprix Lab responsible for brand integrity, operational oversight, and ensuring every project meets the highest standards of delivery.',
+      bio: 'The strategic head of Oprix Labs responsible for brand integrity, operational oversight, and ensuring every project meets the highest standards of delivery.',
     },
     {
       id: 2,
@@ -66,7 +66,7 @@ export default function Team() {
         'Deadline monitoring & progress tracking',
         'Internal process coordination',
       ],
-      bio: 'Oversees the internal operations of Oprix Lab — managing the technical pool, ensuring member accountability, and keeping projects on schedule.',
+      bio: 'Oversees the internal operations of Oprix Labs — managing the technical pool, ensuring member accountability, and keeping projects on schedule.',
     },
     {
       id: 3,
@@ -79,7 +79,7 @@ export default function Team() {
         'Marketing coordination',
         'Client onboarding support',
       ],
-      bio: "The team responsible for growing Oprix Lab's client base — identifying opportunities, preparing proposals, and coordinating marketing efforts.",
+      bio: "The team responsible for growing Oprix Labs's client base — identifying opportunities, preparing proposals, and coordinating marketing efforts.",
     },
   ];
 
@@ -346,7 +346,7 @@ export default function Team() {
         <section className="text-center py-16 px-10 bg-gradient-to-br from-[#22d3ee]/5 to-blue-500/5 border border-[#22d3ee]/20 rounded-xl max-w-2xl mx-auto animate-fadeInUp">
           <h2 className="text-4xl font-bold text-white mb-4">Ready to Work With Us?</h2>
           <p className="text-lg text-gray-300 mb-8">
-            Let's discuss how Oprix Lab can help bring your project to life.
+            Let's discuss how Oprix Labs can help bring your project to life.
           </p>
           <Link
             to="/contact"

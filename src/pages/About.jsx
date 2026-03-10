@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+﻿import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -11,7 +11,7 @@ export default function About() {
         <section className="py-16 bg-[#020c1b] pt-[120px] pb-10">
           <div className="max-w-[1200px] mx-auto px-8 text-center">
             <h1 className="text-[3rem] font-bold leading-tight text-[#ccd6f6] mb-4">
-              About Oprix Lab
+              About Oprix Labs
             </h1>
             <p className="text-xl leading-relaxed max-w-[600px] mx-auto text-[#8892b0]">
               A curated collective building real-world results through skilled professionals.
@@ -28,7 +28,7 @@ export default function About() {
                   Who We Are
                 </h2>
                 <p className="text-[#8892b0] leading-relaxed">
-                  Oprix Lab is a private tech collective. We curate skilled professionals to
+                  Oprix Labs is a private tech collective. We curate skilled professionals to
                   deliver multi-service digital solutions — spanning web development, mobile apps,
                   IT support, digital systems, and online facilitation.
                 </p>
@@ -55,56 +55,56 @@ export default function About() {
               Our Core Values
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8">
-              <div className="bg-[#0d1f3c] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer">
+              <div className="group bg-[#0d1f3c] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer">
                 <h3 className="text-[1.75rem] font-bold leading-tight text-[#ccd6f6] mb-4">
                   Trust
                 </h3>
-                <p className="text-[#8892b0] leading-relaxed">
+                <p className="text-[#8892b0] group-hover:text-white leading-relaxed transition-colors duration-300">
                   Our single most important value. Every client interaction, member assignment, and
                   project delivery is guided by accountability and transparency.
                 </p>
               </div>
-              <div className="bg-[#0d1f3c] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer">
+              <div className="group bg-[#0d1f3c] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer">
                 <h3 className="text-[1.75rem] font-bold leading-tight text-[#ccd6f6] mb-4">
                   Accountability
                 </h3>
-                <p className="text-[#8892b0] leading-relaxed">
-                  Every member operates under the Oprix Lab brand with clear responsibilities. We
+                <p className="text-[#8892b0] group-hover:text-white leading-relaxed transition-colors duration-300">
+                  Every member operates under the Oprix Labs brand with clear responsibilities. We
                   take ownership of our commitments from inquiry to delivery.
                 </p>
               </div>
-              <div className="bg-[#0d1f3c] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer">
+              <div className="group bg-[#0d1f3c] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer">
                 <h3 className="text-[1.75rem] font-bold leading-tight text-[#ccd6f6] mb-4">
                   Competence
                 </h3>
-                <p className="text-[#8892b0] leading-relaxed">
+                <p className="text-[#8892b0] group-hover:text-white leading-relaxed transition-colors duration-300">
                   We curate only skilled, capable professionals. Technical quality is non-negotiable
                   — we only accept members who can reliably deliver results.
                 </p>
               </div>
-              <div className="bg-[#0d1f3c] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer">
+              <div className="group bg-[#0d1f3c] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer">
                 <h3 className="text-[1.75rem] font-bold leading-tight text-[#ccd6f6] mb-4">
                   Professionalism
                 </h3>
-                <p className="text-[#8892b0] leading-relaxed">
+                <p className="text-[#8892b0] group-hover:text-white leading-relaxed transition-colors duration-300">
                   We operate with structure, process documentation, and consistent standards — even
                   as an unregistered collective. Professional conduct is expected at every level.
                 </p>
               </div>
-              <div className="bg-[#0d1f3c] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer">
+              <div className="group bg-[#0d1f3c] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer">
                 <h3 className="text-[1.75rem] font-bold leading-tight text-[#ccd6f6] mb-4">
                   Accessibility
                 </h3>
-                <p className="text-[#8892b0] leading-relaxed">
+                <p className="text-[#8892b0] group-hover:text-white leading-relaxed transition-colors duration-300">
                   We make reliable digital solutions accessible to individuals, small businesses,
                   churches, schools, and organizations at every level.
                 </p>
               </div>
-              <div className="bg-[#0d1f3c] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer">
+              <div className="group bg-[#0d1f3c] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer">
                 <h3 className="text-[1.75rem] font-bold leading-tight text-[#ccd6f6] mb-4">
                   Structured Growth
                 </h3>
-                <p className="text-[#8892b0] leading-relaxed">
+                <p className="text-[#8892b0] group-hover:text-white leading-relaxed transition-colors duration-300">
                   We don't rush. The trial-phase strategy ensures sustainable growth — building
                   systems and reputation before scaling and formal registration.
                 </p>
@@ -121,7 +121,7 @@ export default function About() {
             </h2>
             <div className="max-w-[800px]">
               <p className="text-[#8892b0] mb-6 leading-relaxed">
-                Oprix Lab was founded as a structured experiment during university — a deliberate plan to build a trustworthy digital brand before formal registration. Rather
+                Oprix Labs was founded as a structured experiment during university — a deliberate plan to build a trustworthy digital brand before formal registration. Rather
                 than waiting for the "perfect" moment, we chose to act: build systems, deliver real
                 projects, and earn a reputation the right way.
               </p>
