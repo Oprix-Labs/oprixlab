@@ -139,40 +139,6 @@ export default function Process() {
               <li>No impersonation of individuals, institutions, or organizations</li>
               <li>All services must remain lawful under applicable regulations</li>
             </ul>
-
-            <div className="mt-12 max-w-[900px] space-y-10">
-              <div>
-                <h3 className="text-2xl font-bold leading-tight text-[#ccd6f6] mb-4">
-                  Privacy Policy
-                </h3>
-                <p className="text-[#8892b0] mb-4 leading-relaxed">
-                  Oprix Labs collects only the information required to deliver and support client
-                  services, such as contact details, project requirements, and communication records.
-                </p>
-                <ul className="list-disc ml-6 text-[#8892b0] space-y-2">
-                  <li>Client information is used solely for project communication, delivery, and support.</li>
-                  <li>We do not sell or rent personal data to third parties.</li>
-                  <li>Data access is restricted to authorized team members assigned to a project.</li>
-                  <li>Reasonable technical and organizational safeguards are applied to protect stored data.</li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 className="text-2xl font-bold leading-tight text-[#ccd6f6] mb-4">
-                  Terms of Service
-                </h3>
-                <p className="text-[#8892b0] mb-4 leading-relaxed">
-                  By engaging Oprix Labs, clients agree to the project scope, payment terms, and
-                  delivery process defined in the approved proposal or written agreement.
-                </p>
-                <ul className="list-disc ml-6 text-[#8892b0] space-y-2">
-                  <li>Work begins only after payment confirmation according to agreed billing terms.</li>
-                  <li>Clients must provide accurate project requirements and timely feedback.</li>
-                  <li>Delivery timelines may be adjusted if scope changes or required inputs are delayed.</li>
-                  <li>All services must be requested and used for lawful purposes only.</li>
-                </ul>
-              </div>
-            </div>
           </div>
         </section>
 

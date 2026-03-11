@@ -8,6 +8,8 @@ import Contact from './pages/Contact'
 import Process from './pages/Process'
 import Blog from './pages/Blog'
 import Team from './pages/Team'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import TermsOfService from './pages/TermsOfService'
 import ScrollToTop from './components/ScrollToTop'
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
         <Route path="/process" element={<Process />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/team" element={<Team />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-of-service" element={<TermsOfService />} />
       </Routes>
     </Router>
   )

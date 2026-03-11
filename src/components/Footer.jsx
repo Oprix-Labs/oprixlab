@@ -81,8 +81,8 @@ const socialLinks = [
 ];
 
 const legalLinks = [
-  { label: 'Privacy Policy', to: '/about' },
-  { label: 'Terms of Service', to: '/about' },
+  { label: 'Privacy Policy', to: '/privacy-policy' },
+  { label: 'Terms of Service', to: '/terms-of-service' },
 ];
 
 export default function Footer() {
