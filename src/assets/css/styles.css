@@ -283,3 +283,69 @@ h1, h2, h3, h4, h5, h6 {
   .btn-pulse-glow         { animation: none; }
   .float-up               { animation: none; }
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   ABOUT PAGE — UI UPGRADE STYLES
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+/* ─── Scroll progress bar ─────────────────────────────────────────────────── */
+.about-scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #0066ff, #00d4ff);
+  z-index: 9999;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.6), 0 0 20px rgba(0, 102, 255, 0.3);
+  transform-origin: 0%;
+}
+
+/* ─── Dot grid layered on each section ───────────────────────────────────── */
+.about-section {
+  background-image: radial-gradient(rgba(0, 212, 255, 0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* ─── Heading accent line ────────────────────────────────────────────────── */
+.about-accent-line {
+  height: 2px;
+  width: 72px;
+  background: linear-gradient(90deg, #0066ff, #00d4ff, transparent);
+  border-radius: 1px;
+}
+
+/* ─── Value card specular radial highlight (driven by --mx / --my) ────────── */
+.about-value-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-value-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  background: radial-gradient(
+    circle at var(--mx, 50%) var(--my, 50%),
+    rgba(0, 212, 255, 0.09) 0%,
+    transparent 60%
+  );
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.about-value-card:hover::before { opacity: 1; }
+
+.about-value-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── Reduced motion overrides ───────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .about-scroll-progress { display: none; }
+  .about-value-card::before { display: none; }
+}
