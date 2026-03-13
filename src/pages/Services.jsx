@@ -24,7 +24,7 @@ const SERVICES = [
     id: 'web-applications',
     icon: '💻',
     title: 'Web Applications',
-    desc: 'Interactive, functional web apps built to solve real operational problems — from booking systems and portals to dashboards and data collection tools.',
+    desc: 'Interactive, functional web apps built to solve real operational problems, from booking systems and portals to dashboards and data collection tools.',
     items: [
       'Simple web applications',
       'Booking & reservation systems',
@@ -38,7 +38,7 @@ const SERVICES = [
     id: null,
     icon: '📱',
     title: 'Mobile Applications',
-    desc: 'Mobile apps built for practical use — informational apps, event or directory apps, and lightweight internal tools, deployed cross-platform on Android and iOS.',
+    desc: 'Mobile apps built for practical use: informational apps, event or directory apps, and lightweight internal tools, deployed cross-platform on Android and iOS.',
     items: [
       'Simple informational apps',
       'Event & directory apps',
@@ -51,7 +51,7 @@ const SERVICES = [
     id: 'it-support-technical-services',
     icon: '🛠️',
     title: 'IT Support & Technical Services',
-    desc: 'Hands-on technical support for individuals and businesses — from software setup and troubleshooting to network configuration and data protection.',
+    desc: 'Hands-on technical support for individuals and businesses, from software setup and troubleshooting to network configuration and data protection.',
     items: [
       'Software installation & OS troubleshooting',
       'Virus & malware removal',
@@ -65,7 +65,7 @@ const SERVICES = [
     id: 'infrastructure-online-setup',
     icon: '☁️',
     title: 'Infrastructure & Online Setup',
-    desc: 'Get your business properly set up online — from professional email and cloud storage to website deployment and basic security configurations.',
+    desc: 'Get your business properly set up online, from professional email and cloud storage to website deployment and basic security configurations.',
     items: [
       'Business email & Google Workspace setup',
       'Cloud storage & user permissions',
@@ -77,7 +77,7 @@ const SERVICES = [
     id: 'digital-systems-automation',
     icon: '⚙️',
     title: 'Digital Systems & Automation',
-    desc: 'Streamline your workflows with smart digital tools — automated forms, spreadsheet systems, dashboards, and lightweight internal platforms.',
+    desc: 'Streamline your workflows with smart digital tools: automated forms, spreadsheet systems, dashboards, and lightweight internal platforms.',
     items: [
       'Online forms & data collection',
       'Workflow & spreadsheet automation',
@@ -101,7 +101,7 @@ const SERVICES = [
     id: null,
     icon: '🪪',
     title: 'Digital & E-Services',
-    desc: 'We help individuals navigate and complete essential government and institutional online processes — from academic result checks to business and ID registrations.',
+    desc: 'We help individuals navigate and complete essential government and institutional online processes, from academic result checks to business and ID registrations.',
     items: [
       'Academic result checking (BECE / WASSCE)',
       'School & university application assistance',

@@ -201,28 +201,82 @@ function MagneticButton({ children, strength = 0.35 }) {
   );
 }
 
-/* ─── Service card with 3D tilt + specular highlight ──────────────────────── */
-function ServiceCard({ icon, alt, title, description, target = 120 }) {
-  const [count, setCount] = useState(0);
-  const hasAnimated = useRef(false);
+/* ─── Emoji service card with same 3D tilt (used for bottom 2 cards) ─────── */
+function EmojiServiceCard({ emoji, title, desc }) {
   const cardRef = useRef(null);
 
-  const handleMouseEnter = () => {
-    if (hasAnimated.current) return;
-    hasAnimated.current = true;
-    const increment = target / 60;
-    let current = 0;
-    const update = () => {
-      current += increment;
-      if (current < target) {
-        setCount(Math.ceil(current));
-        requestAnimationFrame(update);
-      } else {
-        setCount(target);
-      }
-    };
-    update();
+  const handleMouseMove = (e) => {
+    const card = cardRef.current;
+    if (!card) return;
+    const { left, top, width, height } = card.getBoundingClientRect();
+    const mx = ((e.clientX - left) / width) * 100;
+    const my = ((e.clientY - top) / height) * 100;
+    card.style.setProperty('--mx', `${mx}%`);
+    card.style.setProperty('--my', `${my}%`);
+    const rx = ((e.clientY - top) / height - 0.5) * -12;
+    const ry = ((e.clientX - left) / width - 0.5) * 12;
+    card.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-6px) scale(1.02)`;
   };
+
+  const handleMouseLeave = () => {
+    const card = cardRef.current;
+    if (!card) return;
+    card.style.transform = '';
+  };
+
+  return (
+    <div
+      ref={cardRef}
+      className="service-card bg-[#112240] rounded-[15px] p-8 shadow-md cursor-pointer border border-transparent hover:border-[rgba(34,211,238,0.15)]"
+      style={{ transition: 'transform 0.25s ease, box-shadow 0.3s ease' }}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+    >
+      <div
+        style={{
+          width: 48,
+          height: 48,
+          borderRadius: 10,
+          background: 'rgba(34,211,238,0.07)',
+          border: '1px solid rgba(34,211,238,0.18)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          fontSize: 22,
+          marginBottom: 16,
+        }}
+      >
+        {emoji}
+      </div>
+      <h3 className="text-[1.4rem] font-bold leading-tight text-[#ccd6f6] mb-3">{title}</h3>
+      <p className="text-[#8892b0] text-sm leading-relaxed">{desc}</p>
+    </div>
+  );
+}
+
+/* ─── Service card with 3D tilt + specular highlight ──────────────────────── */
+function ServiceCard({ icon, alt, title, description, target = 120 }) {
+  // const [count, setCount] = useState(0);
+  // const hasAnimated = useRef(false);
+  const cardRef = useRef(null);
+
+  // ── Commented out until we have real project counts ──────────
+  // const handleMouseEnter = () => {
+  //   if (hasAnimated.current) return;
+  //   hasAnimated.current = true;
+  //   const increment = target / 60;
+  //   let current = 0;
+  //   const update = () => {
+  //     current += increment;
+  //     if (current < target) {
+  //       setCount(Math.ceil(current));
+  //       requestAnimationFrame(update);
+  //     } else {
+  //       setCount(target);
+  //     }
+  //   };
+  //   update();
+  // };
 
   const handleMouseMove = (e) => {
     const card = cardRef.current;
@@ -248,7 +302,6 @@ function ServiceCard({ icon, alt, title, description, target = 120 }) {
       ref={cardRef}
       className="service-card group relative overflow-hidden bg-[#112240] rounded-[15px] p-8 shadow-md cursor-pointer"
       style={{ transition: 'transform 0.25s ease, box-shadow 0.3s ease' }}
-      onMouseEnter={handleMouseEnter}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
@@ -270,11 +323,13 @@ function ServiceCard({ icon, alt, title, description, target = 120 }) {
         >
           <img src={icon} alt={alt || title} style={{ width: 28, height: 28, objectFit: 'contain' }} />
         </div>
+        {/* ── Commented out until we have real project counts ──
         <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center gap-1">
           <span className="counter-num text-[#22d3ee] font-bold text-base">{count}</span>
           <span className="plus-sign text-[#22d3ee] font-bold text-base">+</span>
           <span className="text-[#8892b0] text-xs whitespace-nowrap">Projects</span>
         </div>
+        ── */}
       </div>
       <div className="relative z-10">
         <h3 className="text-[1.5rem] font-bold leading-tight text-[#ccd6f6] mb-3">{title}</h3>
@@ -513,29 +568,7 @@ export default function Home() {
                   desc: 'Digital access support, e-services assistance, document handling, and online service navigation for individuals and organizations.',
                 },
               ].map(({ emoji, title, desc }) => (
-                <div
-                  key={title}
-                  className="bg-[#112240] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer border border-transparent hover:border-[rgba(34,211,238,0.15)]"
-                >
-                  <div
-                    style={{
-                      width: 48,
-                      height: 48,
-                      borderRadius: 10,
-                      background: 'rgba(34,211,238,0.07)',
-                      border: '1px solid rgba(34,211,238,0.18)',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      fontSize: 22,
-                      marginBottom: 16,
-                    }}
-                  >
-                    {emoji}
-                  </div>
-                  <h3 className="text-[1.4rem] font-bold leading-tight text-[#ccd6f6] mb-3">{title}</h3>
-                  <p className="text-[#8892b0] text-sm leading-relaxed">{desc}</p>
-                </div>
+                <EmojiServiceCard key={title} emoji={emoji} title={title} desc={desc} />
               ))}
             </div>
 
@@ -652,7 +685,7 @@ export default function Home() {
               Ready to start your project?
             </h2>
             <p className="text-[#8892b0] mb-10 max-w-[580px] mx-auto leading-relaxed">
-              Whether you need a website, mobile app, IT support, or digital assistance — we have
+              Whether you need a website, mobile app, IT support, or digital assistance, we have
               the right professional for your needs.
             </p>
             <MagneticButton>

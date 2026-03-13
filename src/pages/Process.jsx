@@ -73,7 +73,7 @@ export default function Process() {
               How We Work
             </h1>
             <p className="text-xl leading-relaxed max-w-[600px] mx-auto text-[#8892b0]">
-              A transparent, structured project flow from inquiry to delivery — with accountability at every step.
+              A transparent, structured project flow from inquiry to delivery, with accountability at every step.
             </p>
           </div>
         </section>

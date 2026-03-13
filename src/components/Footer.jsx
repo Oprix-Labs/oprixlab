@@ -225,8 +225,8 @@ export default function Footer() {
               </p>
               <p>
                 Phone:{' '}
-                <a href="tel:+233551234567" className="rounded-sm px-1 -mx-1 transition-colors duration-300 hover:text-[#22d3ee] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#22d3ee]/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[#08182c]">
-                  (+233) 551 234 567
+                <a href="tel:+233502988681" className="rounded-sm px-1 -mx-1 transition-colors duration-300 hover:text-[#22d3ee] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#22d3ee]/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[#08182c]">
+                  (+233) 502 988 681
                 </a>
               </p>
               <p>Hours: Mon - Sat, 9:00 AM - 6:00 PM</p>

@@ -241,6 +241,7 @@ function FullTeamPage() {
       role: 'President',
       linkedin: '#',
       github: '#',
+      skills: ['Strategic Leadership', 'Project Management', 'Client Relations', 'Web Development', 'Business Operations'],
       responsibilities: [
         'Final authority on all operational decisions',
         'Oversight of client communication and project approval',
@@ -260,6 +261,7 @@ function FullTeamPage() {
       role: 'Vice President',
       linkedin: '#',
       github: '#',
+      skills: ['Business Development', 'Client Acquisition', 'Partnership Management', 'Digital Marketing', 'Full-Stack Development'],
       responsibilities: [
         'Assisting the President in overseeing operations',
         'Coordinating internal teams when necessary',
@@ -280,6 +282,7 @@ function FullTeamPage() {
       role: 'Head of Internal Affairs',
       linkedin: '#',
       github: '#',
+      skills: ['Operations Management', 'Talent Coordination', 'Process Documentation', 'UI/UX Design', 'Digital Systems'],
       responsibilities: [
         'Leading the Operations & Talent Management Team',
         'Overseeing member onboarding and identity verification',
@@ -299,6 +302,7 @@ function FullTeamPage() {
       role: 'Internal Operations',
       linkedin: '#',
       github: '#',
+      skills: ['Project Coordination', 'Client Communication', 'Web Development', 'IT Support', 'Documentation'],
       responsibilities: [
         'Supporting member onboarding and profile documentation',
         'Monitoring active project timelines and deadlines',
@@ -316,6 +320,7 @@ function FullTeamPage() {
       role: 'Internal Operations',
       linkedin: '#',
       github: '#',
+      skills: ['Project Coordination', 'Mobile Development', 'Digital Systems', 'Client Communication', 'Quality Assurance'],
       responsibilities: [
         'Supporting member onboarding and profile documentation',
         'Monitoring active project timelines and deadlines',
@@ -336,6 +341,7 @@ function FullTeamPage() {
       role: 'Head of External Affairs',
       linkedin: '#',
       github: '#',
+      skills: ['Business Development', 'Client Acquisition', 'Partnership Management', 'Digital Marketing', 'Full-Stack Development'],
       responsibilities: [
         'Leading the Client Acquisition Team strategy',
         'Identifying high-value leads and business opportunities',
@@ -352,6 +358,7 @@ function FullTeamPage() {
       role: 'Client Acquisition',
       linkedin: '#',
       github: '#',
+      skills: ['Lead Generation', 'Client Outreach', 'Web Development', 'Content Creation', 'CRM Tools'],
       responsibilities: [
         'Generating leads and identifying new prospects',
         'Conducting client outreach and follow-up communications',
@@ -368,6 +375,7 @@ function FullTeamPage() {
       role: 'Client Acquisition',
       linkedin: '#',
       github: '#',
+      skills: ['Lead Generation', 'Client Outreach', 'IT Support', 'Proposal Writing', 'Social Media'],
       responsibilities: [
         'Generating leads and identifying new prospects',
         'Conducting client outreach and follow-up communications',

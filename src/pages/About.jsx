@@ -296,7 +296,7 @@ export default function About() {
                 </SectionHeading>
                 <p className="text-[#8892b0] leading-relaxed">
                   Oprix Labs is a private tech collective. We curate skilled professionals to
-                  deliver multi-service digital solutions — spanning web development, mobile apps,
+                  deliver multi-service digital solutions spanning web development, mobile apps,
                   IT support, digital systems, and online facilitation.
                 </p>
               </motion.div>
@@ -347,11 +347,11 @@ export default function About() {
                 },
                 {
                   title: 'Competence',
-                  body: 'We curate only skilled, capable professionals. Technical quality is non-negotiable — we only accept members who can reliably deliver results.',
+                  body: 'We curate only skilled, capable professionals. Technical quality is non-negotiable. We only accept members who can reliably deliver results.',
                 },
                 {
                   title: 'Professionalism',
-                  body: 'We operate with structure, process documentation, and consistent standards — even as an unregistered collective. Professional conduct is expected at every level.',
+                  body: 'We operate with structure, process documentation, and consistent standards, even as an unregistered collective. Professional conduct is expected at every level.',
                 },
                 {
                   title: 'Accessibility',
@@ -359,7 +359,7 @@ export default function About() {
                 },
                 {
                   title: 'Structured Growth',
-                  body: "We don't rush. The trial-phase strategy ensures sustainable growth — building systems and reputation before scaling and formal registration.",
+                  body: "We don't rush. The trial-phase strategy ensures sustainable growth, building systems and reputation before scaling and formal registration.",
                 },
               ].map((val, i) => (
                 <motion.div key={val.title} variants={fadeUp} custom={i} style={{ height: '100%' }}>
@@ -391,7 +391,7 @@ export default function About() {
               transition={{ duration: 0.6 }}
             >
               <p className="text-[#8892b0] mb-6 leading-relaxed">
-                Oprix Labs was founded as a structured experiment during university — a deliberate plan to build a trustworthy digital brand before formal registration. Rather
+                Oprix Labs was founded as a structured experiment during university, a deliberate plan to build a trustworthy digital brand before formal registration. Rather
                 than waiting for the "perfect" moment, we chose to act: build systems, deliver real
                 projects, and earn a reputation the right way.
               </p>
@@ -405,15 +405,15 @@ export default function About() {
             >
               {[
                 {
-                  phase: 'Year 1 — Build',
+                  phase: 'Year 1: Build',
                   body: 'Establish internal systems, onboard skilled members, deliver real client projects, and collect testimonials. Focus on execution and learning.',
                 },
                 {
-                  phase: 'Year 2 — Refine',
+                  phase: 'Year 2: Refine',
                   body: 'Improve structure, increase pricing, standardize documentation, and prepare for formal company registration. Scale sustainably with proven operational excellence.',
                 },
                 {
-                  phase: 'Year 3 — Evolve',
+                  phase: 'Year 3: Evolve',
                   body: 'Expand into higher-value projects, deepen team specialization, and strengthen long-term client partnerships while continuously improving systems for sustainable growth.',
                 },
               ].map((item, i) => (
@@ -511,7 +511,7 @@ export default function About() {
                   custom={3}
                   className="bg-[#0d1f3c] rounded-[15px] p-6 text-center border border-[#22d3ee]/30"
                 >
-                  <h3 className="text-lg font-bold text-[#ccd6f6] mb-1">Members — Technical Pool</h3>
+                  <h3 className="text-lg font-bold text-[#ccd6f6] mb-1">Members</h3>
                   <p className="text-sm text-[#8892b0]">Technical professionals who execute assigned projects, meet milestones, and uphold service standards.</p>
                 </motion.div>
               </motion.div>
