@@ -72,7 +72,7 @@ export default function PrivacyPolicy() {
                 </h2>
                 <p className="text-[#8892b0] leading-relaxed">
                   If you have questions or concerns about our privacy practices, please contact us
-                  at <span className="text-[#22d3ee]">support@oprixlabs.com</span>.
+                  at <span className="text-[#22d3ee]">oprixlabs@gmail.com</span>.
                 </p>
               </div>
             </div>

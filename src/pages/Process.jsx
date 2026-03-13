@@ -116,8 +116,8 @@ export default function Process() {
               Member Visibility Policy
             </h2>
             <p className="text-[#8892b0] leading-relaxed max-w-[700px]">
-              Oprix Labs maintains public profiles for all active members, including their role, core
-              skills, and portfolio samples. This policy promotes accountability, builds client trust,
+              Oprix Labs maintains public profiles for all active members, including their role and core
+              skills. These profiles can be viewed on our <a href="/team" className="text-[#22d3ee] hover:underline">Team page</a>. This policy promotes accountability, builds client trust,
               and ensures transparency across our curated network.
             </p>
           </div>

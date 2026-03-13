@@ -359,7 +359,7 @@ export default function About() {
                 },
                 {
                   title: 'Structured Growth',
-                  body: "We don't rush. The trial-phase strategy ensures sustainable growth, building systems and reputation before scaling and formal registration.",
+                  body: "We don't rush. Our strategy prioritises sustainable growth, building systems and reputation before scaling and formal registration.",
                 },
               ].map((val, i) => (
                 <motion.div key={val.title} variants={fadeUp} custom={i} style={{ height: '100%' }}>
@@ -391,7 +391,7 @@ export default function About() {
               transition={{ duration: 0.6 }}
             >
               <p className="text-[#8892b0] mb-6 leading-relaxed">
-                Oprix Labs was founded as a structured experiment during university, a deliberate plan to build a trustworthy digital brand before formal registration. Rather
+                Oprix Labs was built with a clear purpose: establish a trustworthy digital brand, deliver real projects, and develop the operational foundation for long-term growth. Rather
                 than waiting for the "perfect" moment, we chose to act: build systems, deliver real
                 projects, and earn a reputation the right way.
               </p>
@@ -456,7 +456,7 @@ export default function About() {
                   className="bg-[#22d3ee] text-[#020c1b] rounded-[15px] p-6 text-center shadow-lg"
                 >
                   <h3 className="text-xl font-bold mb-1">Founders</h3>
-                  <p className="text-sm">Foundational architects and long-term vision custodians; non-operational during the trial phase.</p>
+                  <p className="text-sm">Foundational architects and long-term vision custodians of Oprix Labs.</p>
                 </motion.div>
                 <motion.div variants={fadeUp} custom={0.5} className="flex justify-center">
                   <div className="w-0.5 h-8 bg-[#22d3ee]"></div>

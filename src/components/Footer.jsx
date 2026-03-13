@@ -12,12 +12,15 @@ const quickLinks = [
 ];
 
 const services = [
-  { label: 'Web Development', to: '/services#web-solutions' },
-  { label: 'Software Development', to: '/services#web-applications' },
-  { label: 'Digital Transformation', to: '/services#digital-systems-automation' },
-  { label: 'UI/UX Design', to: '/services#web-solutions' },
-  { label: 'Cloud Solutions', to: '/services#infrastructure-online-setup' },
-  { label: 'IT Consulting', to: '/services#it-support-technical-services' },
+  { label: 'Web Solutions', to: '/services#web-solutions' },
+  { label: 'Web Applications', to: '/services#web-applications' },
+  { label: 'Mobile Applications', to: '/services#mobile-applications' },
+  { label: 'IT Support & Technical Services', to: '/services#it-support-technical-services' },
+  { label: 'Infrastructure & Online Setup', to: '/services#infrastructure-online-setup' },
+  { label: 'Digital Systems & Automation', to: '/services#digital-systems-automation' },
+  { label: 'Training & Workshops', to: '/services#training-workshops' },
+  { label: 'Digital & E-Services', to: '/services#digital-e-services' },
+  { label: 'Digital Access & Support Services', to: '/services#digital-access-support' },
 ];
 
 const socialLinks = [
@@ -92,7 +95,7 @@ export default function Footer() {
   return (
     <footer className="mt-auto border-t border-[#1f3a5f] bg-[#08182c] text-[#cbd5e1]" aria-label="Site footer">
       <div className="mx-auto max-w-[1200px] px-6 pb-6 pt-14 sm:px-8 lg:px-10">
-        <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+        <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_2fr]">
           <section aria-labelledby="company-overview">
             <div className="mb-5 flex items-center gap-3">
               <img src={oprixLogo} alt="Oprix Labs logo" className="h-10 w-10 rounded-xl object-contain" />
@@ -169,18 +172,32 @@ export default function Footer() {
             >
               Services
             </h2>
-            <ul className="mt-4 space-y-3 text-sm text-[#94a3b8]">
-              {services.map((service) => (
-                <li key={service.label}>
-                  <Link
-                    to={service.to}
-                    className="inline-flex items-center rounded-md px-2 py-1 -mx-2 -my-1 transition-all duration-300 hover:text-[#22d3ee] hover:bg-[rgba(34,211,238,0.08)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#22d3ee]/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[#08182c]"
-                  >
-                    {service.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <div className="mt-4 grid grid-cols-2 gap-x-8">
+              <ul className="space-y-3 text-sm text-[#94a3b8]">
+                {services.slice(0, 5).map((service) => (
+                  <li key={service.label}>
+                    <Link
+                      to={service.to}
+                      className="inline-flex items-center rounded-md px-2 py-1 -mx-2 -my-1 transition-all duration-300 hover:text-[#22d3ee] hover:bg-[rgba(34,211,238,0.08)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#22d3ee]/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[#08182c]"
+                    >
+                      {service.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <ul className="space-y-3 text-sm text-[#94a3b8]">
+                {services.slice(5).map((service) => (
+                  <li key={service.label}>
+                    <Link
+                      to={service.to}
+                      className="inline-flex items-center rounded-md px-2 py-1 -mx-2 -my-1 transition-all duration-300 hover:text-[#22d3ee] hover:bg-[rgba(34,211,238,0.08)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#22d3ee]/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[#08182c]"
+                    >
+                      {service.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </section>
 
           {/* <section aria-labelledby="resources-footer-heading">

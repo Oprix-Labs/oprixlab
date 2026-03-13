@@ -1,5 +1,5 @@
 import { useEffect, useRef, useCallback } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -35,7 +35,7 @@ const SERVICES = [
     ],
   },
   {
-    id: null,
+    id: 'mobile-applications',
     icon: '📱',
     title: 'Mobile Applications',
     desc: 'Mobile apps built for practical use: informational apps, event or directory apps, and lightweight internal tools, deployed cross-platform on Android and iOS.',
@@ -86,7 +86,7 @@ const SERVICES = [
     ],
   },
   {
-    id: null,
+    id: 'training-workshops',
     icon: '🎓',
     title: 'Training & Workshops',
     desc: 'Practical, tailored digital and technical training sessions for schools, churches, businesses, and individuals looking to build their digital literacy.',
@@ -98,7 +98,7 @@ const SERVICES = [
     ],
   },
   {
-    id: null,
+    id: 'digital-e-services',
     icon: '🪪',
     title: 'Digital & E-Services',
     desc: 'We help individuals navigate and complete essential government and institutional online processes, from academic result checks to business and ID registrations.',
@@ -111,7 +111,7 @@ const SERVICES = [
     ],
   },
   {
-    id: null,
+    id: 'digital-access-support',
     icon: '🖨️',
     title: 'Digital Access & Support Services',
     desc: 'Practical day-to-day digital support for those who need help navigating online platforms, managing documents, and completing digital tasks.',
@@ -317,6 +317,19 @@ function Magnetic({ children }) {
 
 /* ─── Main Services Page ──────────────────────────────────────────────────── */
 export default function Services() {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (!hash) return;
+    const id = hash.replace('#', '');
+    // Delay lets the page finish rendering before scrolling
+    const timer = setTimeout(() => {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 120);
+    return () => clearTimeout(timer);
+  }, [hash]);
+
   return (
     <>
       <ScrollProgressBar />
@@ -366,19 +379,13 @@ export default function Services() {
                 >
                   {/* Left: icon + heading */}
                   <motion.div variants={fadeUp} custom={0}>
-                    <div className="services-icon-badge">
-                      <span>{svc.icon}</span>
-                    </div>
-                    <div className="overflow-hidden mt-4">
-                      <motion.h2
-                        className="text-[2.5rem] font-bold leading-tight text-[#ccd6f6] mb-2"
-                        initial={{ clipPath: 'inset(0 100% 0 0)', opacity: 1 }}
-                        whileInView={{ clipPath: 'inset(0 0% 0 0)' }}
-                        viewport={{ once: true, margin: '-60px' }}
-                        transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-                      >
+                    <div className="flex items-center gap-4 mb-2">
+                      <div className="services-icon-badge">
+                        <span>{svc.icon}</span>
+                      </div>
+                      <h2 className="text-[2rem] font-bold leading-tight text-[#ccd6f6]">
                         {svc.title}
-                      </motion.h2>
+                      </h2>
                     </div>
                     <motion.span
                       className="about-accent-line"
