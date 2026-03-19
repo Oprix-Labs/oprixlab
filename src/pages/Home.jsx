@@ -1,10 +1,12 @@
 ﻿import { Link } from 'react-router-dom';
 import { useState, useRef, useEffect, useMemo, useCallback } from 'react';
+import * as THREE from 'three';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import webIcon from '../assets/images/web-icon.png';
 import mobileIcon from '../assets/images/mobile-icon.png';
 import cloudIcon from '../assets/images/cloud-icon.png';
+import logoImg from '../assets/images/oprix-labs-logo.png';
 
 /* ─── Smooth scroll for anchor links ──────────────────────────────────────── */
 function useSmoothScroll() {
@@ -169,6 +171,92 @@ function Particles() {
         />
       ))}
     </div>
+  );
+}
+
+/* ─── Spinning 3D logo in hero background ─────────────────────────────────── */
+function LogoCanvas3D() {
+  const canvasRef = useRef(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    let raf;
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(45, canvas.offsetWidth / canvas.offsetHeight, 0.1, 100);
+    camera.position.z = 5;
+
+    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setSize(canvas.offsetWidth, canvas.offsetHeight);
+    renderer.setClearColor(0x000000, 0);
+
+    // Lights
+    scene.add(new THREE.AmbientLight(0xffffff, 0.5));
+    const keyLight = new THREE.DirectionalLight(0x22d3ee, 1.6);
+    keyLight.position.set(3, 3, 5);
+    scene.add(keyLight);
+    const rimLight = new THREE.DirectionalLight(0x0066ff, 0.8);
+    rimLight.position.set(-3, -2, -3);
+    scene.add(rimLight);
+
+    let mesh = null;
+    const loader = new THREE.TextureLoader();
+    loader.load(logoImg, (texture) => {
+      const aspect = (texture.image.naturalWidth || 1) / (texture.image.naturalHeight || 1);
+      const h = 3.0;
+      const w = h * aspect;
+      const geo = new THREE.BoxGeometry(w, h, 0.06);
+      const edge = new THREE.MeshStandardMaterial({ color: 0x061428, metalness: 0.9, roughness: 0.2 });
+      const face = new THREE.MeshStandardMaterial({ map: texture, transparent: true, metalness: 0.1, roughness: 0.6 });
+      mesh = new THREE.Mesh(geo, [edge, edge, edge, edge, face, face]);
+      scene.add(mesh);
+    });
+
+    const animate = () => {
+      raf = requestAnimationFrame(animate);
+      if (mesh) {
+        mesh.rotation.y += 0.004;
+        mesh.rotation.x = Math.sin(Date.now() * 0.0004) * 0.08;
+      }
+      renderer.render(scene, camera);
+    };
+    animate();
+
+    const ro = new ResizeObserver(() => {
+      const w = canvas.offsetWidth;
+      const h = canvas.offsetHeight;
+      renderer.setSize(w, h);
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+    });
+    ro.observe(canvas);
+
+    return () => {
+      cancelAnimationFrame(raf);
+      ro.disconnect();
+      renderer.dispose();
+    };
+  }, []);
+
+  return (
+    <canvas
+      ref={canvasRef}
+      aria-hidden="true"
+      style={{
+        position: 'absolute',
+        top: '50%',
+        right: '4%',
+        transform: 'translateY(-50%)',
+        width: 'min(38vw, 440px)',
+        height: 'min(38vw, 440px)',
+        opacity: 0.88,
+        pointerEvents: 'none',
+        zIndex: 1,
+      }}
+    />
   );
 }
 
@@ -375,6 +463,7 @@ export default function Home() {
         >
           <HeroCanvas />
           <Particles />
+          <LogoCanvas3D />
 
           {/* radial glow */}
           <div
