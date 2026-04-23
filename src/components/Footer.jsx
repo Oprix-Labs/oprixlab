@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import oprixLogo from '../assets/images/oprix-labs-logo.png';
+import oprixLogo from '../assets/images/oprix-labs-logo-ui.webp';
 
 const quickLinks = [
   { label: 'Home', to: '/' },
@@ -98,7 +98,13 @@ export default function Footer() {
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_2fr]">
           <section aria-labelledby="company-overview">
             <div className="mb-5 flex items-center gap-3">
-              <img src={oprixLogo} alt="Oprix Labs logo" className="h-10 w-10 rounded-xl object-contain" />
+              <img
+                src={oprixLogo}
+                alt="Oprix Labs logo"
+                loading="lazy"
+                decoding="async"
+                className="h-10 w-10 rounded-xl object-contain"
+              />
               <p className="text-lg font-semibold tracking-tight text-[#f1f5f9]">Oprix Labs</p>
             </div>
             <h2 id="company-overview" className="sr-only">

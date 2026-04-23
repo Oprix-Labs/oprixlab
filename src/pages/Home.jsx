@@ -1,12 +1,11 @@
 ﻿import { Link } from 'react-router-dom';
 import { useState, useRef, useEffect, useMemo, useCallback } from 'react';
-import * as THREE from 'three';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import webIcon from '../assets/images/web-icon.png';
-import mobileIcon from '../assets/images/mobile-icon.png';
-import cloudIcon from '../assets/images/cloud-icon.png';
-import logoImg from '../assets/images/oprix-labs-logo.png';
+import webIcon from '../assets/images/web-icon.webp';
+import mobileIcon from '../assets/images/mobile-icon.webp';
+import cloudIcon from '../assets/images/cloud-icon.webp';
+import logoImg from '../assets/images/oprix-labs-logo-texture.webp';
 
 /* ─── Smooth scroll for anchor links ──────────────────────────────────────── */
 function useSmoothScroll() {
@@ -183,61 +182,71 @@ function LogoCanvas3D() {
     if (!canvas) return;
 
     let raf;
-
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(45, canvas.offsetWidth / canvas.offsetHeight, 0.1, 100);
-    camera.position.z = 5;
-
-    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    renderer.setSize(canvas.offsetWidth, canvas.offsetHeight);
-    renderer.setClearColor(0x000000, 0);
-
-    // Lights
-    scene.add(new THREE.AmbientLight(0xffffff, 0.5));
-    const keyLight = new THREE.DirectionalLight(0x22d3ee, 1.6);
-    keyLight.position.set(3, 3, 5);
-    scene.add(keyLight);
-    const rimLight = new THREE.DirectionalLight(0x0066ff, 0.8);
-    rimLight.position.set(-3, -2, -3);
-    scene.add(rimLight);
-
+    let renderer;
+    let ro;
+    let isDisposed = false;
     let mesh = null;
-    const loader = new THREE.TextureLoader();
-    loader.load(logoImg, (texture) => {
-      const aspect = (texture.image.naturalWidth || 1) / (texture.image.naturalHeight || 1);
-      const h = 3.0;
-      const w = h * aspect;
-      const geo = new THREE.BoxGeometry(w, h, 0.06);
-      const edge = new THREE.MeshStandardMaterial({ color: 0x061428, metalness: 0.9, roughness: 0.2 });
-      const face = new THREE.MeshStandardMaterial({ map: texture, transparent: true, metalness: 0.1, roughness: 0.6 });
-      mesh = new THREE.Mesh(geo, [edge, edge, edge, edge, face, face]);
-      scene.add(mesh);
-    });
 
-    const animate = () => {
-      raf = requestAnimationFrame(animate);
-      if (mesh) {
-        mesh.rotation.y += 0.004;
-        mesh.rotation.x = Math.sin(Date.now() * 0.0004) * 0.08;
-      }
-      renderer.render(scene, camera);
-    };
-    animate();
+    import('three').then((THREE) => {
+      if (isDisposed) return;
 
-    const ro = new ResizeObserver(() => {
-      const w = canvas.offsetWidth;
-      const h = canvas.offsetHeight;
-      renderer.setSize(w, h);
-      camera.aspect = w / h;
-      camera.updateProjectionMatrix();
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(45, canvas.offsetWidth / canvas.offsetHeight, 0.1, 100);
+      camera.position.z = 5;
+
+      renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.setSize(canvas.offsetWidth, canvas.offsetHeight);
+      renderer.setClearColor(0x000000, 0);
+
+      // Lights
+      scene.add(new THREE.AmbientLight(0xffffff, 0.5));
+      const keyLight = new THREE.DirectionalLight(0x22d3ee, 1.6);
+      keyLight.position.set(3, 3, 5);
+      scene.add(keyLight);
+      const rimLight = new THREE.DirectionalLight(0x0066ff, 0.8);
+      rimLight.position.set(-3, -2, -3);
+      scene.add(rimLight);
+
+      const loader = new THREE.TextureLoader();
+      loader.load(logoImg, (texture) => {
+        if (isDisposed) return;
+        const aspect = (texture.image.naturalWidth || 1) / (texture.image.naturalHeight || 1);
+        const h = 3.0;
+        const w = h * aspect;
+        const geo = new THREE.BoxGeometry(w, h, 0.06);
+        const edge = new THREE.MeshStandardMaterial({ color: 0x061428, metalness: 0.9, roughness: 0.2 });
+        const face = new THREE.MeshStandardMaterial({ map: texture, transparent: true, metalness: 0.1, roughness: 0.6 });
+        mesh = new THREE.Mesh(geo, [edge, edge, edge, edge, face, face]);
+        scene.add(mesh);
+      });
+
+      const animate = () => {
+        if (isDisposed) return;
+        raf = requestAnimationFrame(animate);
+        if (mesh) {
+          mesh.rotation.y += 0.004;
+          mesh.rotation.x = Math.sin(Date.now() * 0.0004) * 0.08;
+        }
+        renderer.render(scene, camera);
+      };
+      animate();
+
+      ro = new ResizeObserver(() => {
+        const w = canvas.offsetWidth;
+        const h = canvas.offsetHeight;
+        renderer.setSize(w, h);
+        camera.aspect = w / h;
+        camera.updateProjectionMatrix();
+      });
+      ro.observe(canvas);
     });
-    ro.observe(canvas);
 
     return () => {
+      isDisposed = true;
       cancelAnimationFrame(raf);
-      ro.disconnect();
-      renderer.dispose();
+      if (ro) ro.disconnect();
+      if (renderer) renderer.dispose();
     };
   }, []);
 
@@ -409,7 +418,13 @@ function ServiceCard({ icon, alt, title, description, target = 120 }) {
           }}
           className="group-hover:[transform:rotate(8deg)] group-hover:![background:rgba(34,211,238,0.15)]"
         >
-          <img src={icon} alt={alt || title} style={{ width: 28, height: 28, objectFit: 'contain' }} />
+          <img
+            src={icon}
+            alt={alt || title}
+            loading="lazy"
+            decoding="async"
+            style={{ width: 28, height: 28, objectFit: 'contain' }}
+          />
         </div>
         {/* ── Commented out until we have real project counts ──
         <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center gap-1">

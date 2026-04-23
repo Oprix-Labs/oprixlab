@@ -83,7 +83,10 @@ Use this list for **problems anyone can see and anyone can fix** when they have 
 
 **Entries**
 
-- _(None listed yet — add items below this line.)_
+- Images and Animations takes a while to load on each device [Done]
+- Images of Teams have not been placed in yet [In Progress]
+- Connecting of all links to real life public links (Github, LinkedIn) [In Progress]
+- Color of the Team's page background is different from the other webpages [Done]
 
 ---
 

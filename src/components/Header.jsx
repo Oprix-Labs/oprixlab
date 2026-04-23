@@ -1,6 +1,6 @@
 ﻿import { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
-import oprixLabsLogo from '../assets/images/oprix-labs-logo.png';
+import oprixLabsLogo from '../assets/images/oprix-labs-logo-ui.webp';
 
 const links = [
   { to: '/', label: 'Home' },
@@ -58,6 +58,8 @@ export default function Header() {
           <img
             src={oprixLabsLogo}
             alt="Oprix Labs logo"
+            decoding="async"
+            fetchPriority="high"
             className="h-8 w-auto"
           />
           <span
