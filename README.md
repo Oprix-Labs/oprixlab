@@ -1,18 +1,103 @@
-# React + Vite
+# Oprix Labs — Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The official marketing site for **Oprix Labs**: a single-page–style experience with routed sections for services, portfolio, team, blog, contact, and legal pages. The front end is built for clarity, motion, and a polished first impression—3D-inspired visuals, scroll-driven reveals, and responsive layout throughout.
 
-Currently, two official plugins are available:
+## What’s in this repo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+| Area | Description |
+|------|-------------|
+| **Pages** | Home, About, Services, Portfolio, Process, Blog, Team, Contact, Privacy Policy, Terms of Service |
+| **Routing** | Client-side routes via React Router (`BrowserRouter`) |
+| **UI** | Shared chrome (`Header`, `Footer`), contact components, scroll-to-top on navigation |
 
-## React Compiler
+Source lives under `src/` (`pages/`, `components/`, `assets/`).
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## Tech stack
 
-Note: This will impact Vite dev & build performances.
+- **React 19** with **Vite 7**
+- **Tailwind CSS 4** (`@tailwindcss/vite`)
+- **React Router** 7
+- **Framer Motion** for animation
+- **Three.js** (where scenes or 3D utilities are used)
+- **Lucide React** for icons
+- **ESLint** 9 with React Hooks and Refresh plugins
+- **React Compiler** enabled via `babel-plugin-react-compiler` (see [React Compiler](https://react.dev/learn/react-compiler) for behavior and performance notes)
 
-## Expanding the ESLint configuration
+## Requirements
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Node.js** — use a current LTS (18+ recommended; match whatever your team standardizes on).
+- **npm** (or compatible client) for installs and scripts.
+
+## Getting started
+
+```bash
+npm install
+npm run dev
+```
+
+The dev server prints a local URL (typically `http://localhost:5173`). Hot module replacement is provided by Vite.
+
+### Other scripts
+
+| Command | Purpose |
+|---------|---------|
+| `npm run build` | Production build to `dist/` |
+| `npm run preview` | Serve the production build locally |
+| `npm run lint` | Run ESLint across the project |
+
+## Project layout (short)
+
+```
+oprixlab/
+├── index.html
+├── vite.config.js
+├── src/
+│   ├── main.jsx
+│   ├── App.jsx          # routes
+│   ├── App.css
+│   ├── pages/           # route screens
+│   ├── components/      # header, footer, forms, etc.
+│   └── assets/          # images and static assets
+└── public/              # static files served as-is
+```
+
+## Contributing
+
+1. Branch from your team’s default branch and keep commits focused.
+2. Run `npm run lint` before opening a PR or handing off work.
+3. Match existing patterns for layout, naming, and styling so the site stays visually consistent.
+
+For **known gaps and coordination**, use the sections at the end of this file so work is visible and does not collide.
+
+---
+
+## Open backlog — public (unfixed)
+
+Use this list for **problems anyone can see and anyone can fix** when they have time: bugs, rough edges, refactors, or ideas that are **not** personally claimed.
+
+**How to use it**
+
+- Add a short bullet: what’s wrong, where it shows up (route or file if known), and optional context.
+- Removing a bullet when the fix lands keeps the doc honest.
+- **Other developers are welcome to pick these up**—no need to ask permission unless your team says otherwise.
+
+**Entries**
+
+- _(None listed yet — add items below this line.)_
+
+---
+
+## Personal holds — private (unfixed)
+
+Use this list when a **specific developer** has identified a problem or follow-up work that **they intend to fix themselves**. Entries here are **not** a free backlog for others: they exist so the team **knows the area is spoken for** and future changes do not conflict with that person’s plan.
+
+**How to use it**
+
+- One bullet per item; start with **your name or handle** so ownership is obvious.
+- Describe the issue or the change you will make, and point to routes, components, or files when helpful.
+- **Do not implement another person’s item** unless they explicitly hand it off or remove it.
+- Delete or strike through the bullet when your fix is merged.
+
+**Entries**
+
+- _(None listed yet — add items below this line.)_
