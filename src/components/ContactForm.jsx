@@ -21,6 +21,7 @@ const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 const EMAILJS_TO_EMAIL = import.meta.env.VITE_EMAILJS_TO_EMAIL;
+const EMAILJS_ACCESS_TOKEN = import.meta.env.VITE_EMAILJS_ACCESS_TOKEN;
 
 function formatSubmittedAt() {
   return new Date().toLocaleString(undefined, {
@@ -129,6 +130,9 @@ export default function ContactForm() {
           service_id: EMAILJS_SERVICE_ID,
           template_id: EMAILJS_TEMPLATE_ID,
           user_id: EMAILJS_PUBLIC_KEY,
+          ...(typeof EMAILJS_ACCESS_TOKEN === 'string' && EMAILJS_ACCESS_TOKEN.trim()
+            ? { accessToken: EMAILJS_ACCESS_TOKEN.trim() }
+            : {}),
           template_params: {
             name: formValues.fullName.trim(),
             email: formValues.email.trim(),
