@@ -1,5 +1,5 @@
 ﻿import { createElement } from 'react';
-import { Github, Linkedin, Mail, MapPin, Phone, Twitter, Clock } from 'lucide-react';
+import { Linkedin, Mail, MapPin, Phone, Twitter, Clock } from 'lucide-react';
 import { motion as Motion, useReducedMotion } from 'framer-motion';
 
 const CONTACT_DETAILS = [
@@ -21,7 +21,7 @@ const CONTACT_DETAILS = [
     id: 'address',
     icon: MapPin,
     label: 'Address',
-    value: 'Accra, Ghana',
+    value: 'Accra, Ghana & Kumasi, Ghana',
     href: '#',
   },
 ];
@@ -29,7 +29,6 @@ const CONTACT_DETAILS = [
 const SOCIAL_LINKS = [
   { id: 'linkedin', icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com' },
   { id: 'twitter', icon: Twitter, label: 'Twitter/X', href: 'https://x.com' },
-  { id: 'github', icon: Github, label: 'GitHub', href: 'https://github.com' },
 ];
 
 export default function GetInTouchCard() {
