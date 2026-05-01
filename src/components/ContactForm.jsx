@@ -17,6 +17,17 @@ const SUBJECT_OPTIONS = [
 ];
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+const EMAILJS_TO_EMAIL = import.meta.env.VITE_EMAILJS_TO_EMAIL || 'ciicicrentsil@gmail.com';
+
+function formatSubmittedAt() {
+  return new Date().toLocaleString(undefined, {
+    dateStyle: 'medium',
+    timeStyle: 'short',
+  });
+}
 
 function validate(values) {
   const nextErrors = {};
@@ -102,8 +113,33 @@ export default function ContactForm() {
     setSubmitState('loading');
 
     try {
-      // Replace this with your API integration: EmailJS, Formspree, or custom endpoint.
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
+        throw new Error('Missing EmailJS environment variables.');
+      }
+
+      const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          service_id: EMAILJS_SERVICE_ID,
+          template_id: EMAILJS_TEMPLATE_ID,
+          user_id: EMAILJS_PUBLIC_KEY,
+          template_params: {
+            name: formValues.fullName.trim(),
+            email: formValues.email.trim(),
+            subject: formValues.subject,
+            message: formValues.message.trim(),
+            time: formatSubmittedAt(),
+            to_email: EMAILJS_TO_EMAIL,
+          },
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('EmailJS /send failed.');
+      }
 
       setSuccessMessage('Message sent successfully. We will get back to you soon.');
       setFormValues(INITIAL_FORM);
