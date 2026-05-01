@@ -119,8 +119,11 @@ export default function ContactForm() {
 
       const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
         method: 'POST',
+        cache: 'no-store',
         headers: {
           'Content-Type': 'application/json',
+          Pragma: 'no-cache',
+          'Cache-Control': 'no-cache, no-store, must-revalidate',
         },
         body: JSON.stringify({
           service_id: EMAILJS_SERVICE_ID,
@@ -138,17 +141,25 @@ export default function ContactForm() {
       });
 
       if (!response.ok) {
-        throw new Error('EmailJS /send failed.');
+        const errorBody = await response.text();
+        throw new Error(`EmailJS /send failed (${response.status} ${response.statusText}) ${errorBody}`.trim());
       }
 
       setSuccessMessage('Message sent successfully. We will get back to you soon.');
       setFormValues(INITIAL_FORM);
       setSubmitState('success');
       window.setTimeout(() => setSubmitState('idle'), 1600);
-    } catch {
+    } catch (error) {
+      const fallbackMessage =
+        'Something went wrong while sending your message. Please try again.';
+      const errorMessage =
+        error instanceof Error ? error.message : fallbackMessage;
+
+      // Keep this visible in DevTools to troubleshoot non-2xx responses quickly.
+      console.error('[ContactForm] Email submit failed:', errorMessage);
       setSubmitState('idle');
       setErrors({
-        submit: 'Something went wrong while sending your message. Please try again.',
+        submit: errorMessage || fallbackMessage,
       });
     }
   };
